@@ -1,0 +1,1717 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-11-06T13:58:24Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "relation/8209601",
+      "properties": {
+        "@id": "relation/8209601",
+        "amenity": "clinic",
+        "building": "yes",
+        "healthcare": "clinic",
+        "name": "Puskesmas Setabelan",
+        "operator": "Ministry of Health",
+        "operator:en": "Ministry of Health",
+        "operator:id": "Kementerian Kesehatan",
+        "operator:type": "government",
+        "operator:wikidata": "Q12490745",
+        "type": "multipolygon",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8265216,
+          -7.5619328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/225531507",
+      "properties": {
+        "@id": "way/225531507",
+        "addr:city": "Surakarta",
+        "addr:housename": "Panti Waluyo",
+        "addr:street": "Jalan Jend. Ahmad Yani",
+        "amenity": "hospital",
+        "name": "R.S Panti Waluyo",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.790728,
+          -7.5600382
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/374651615",
+      "properties": {
+        "@id": "way/374651615",
+        "amenity": "hospital",
+        "name": "Puskesmas Gajahan",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8256402,
+          -7.5832749
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/374656510",
+      "properties": {
+        "@id": "way/374656510",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "name": "RSI Kustati",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8312607,
+          -7.5806945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/401715349",
+      "properties": {
+        "@id": "way/401715349",
+        "amenity": "pharmacy",
+        "building": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Apotek Kondang Sehat",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8195274,
+          -7.5617586
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/410986092",
+      "properties": {
+        "@id": "way/410986092",
+        "building": "yes",
+        "name": "UPTD Puskesmas",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.837188,
+          -7.5754784
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/535045567",
+      "properties": {
+        "@id": "way/535045567",
+        "amenity": "clinic",
+        "building": "yes",
+        "name": "Posyandu Melati Joyosuran",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8269435,
+          -7.5897254
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/535243348",
+      "properties": {
+        "@id": "way/535243348",
+        "amenity": "clinic",
+        "building": "house",
+        "name": "Vita Min",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8239768,
+          -7.578576
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/535599666",
+      "properties": {
+        "@id": "way/535599666",
+        "amenity": "doctors",
+        "building": "yes",
+        "healthcare": "doctor",
+        "name": "Dokter Isdaryanto",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8214061,
+          -7.5496378
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/536074295",
+      "properties": {
+        "@id": "way/536074295",
+        "amenity": "clinic",
+        "building": "yes",
+        "healthcare": "clinic",
+        "name": "Klinik Utama Sri Murti Husada",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7878424,
+          -7.5509912
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/536320225",
+      "properties": {
+        "@id": "way/536320225",
+        "amenity": "clinic",
+        "building": "house",
+        "name": "Swd",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8520508,
+          -7.558725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/536334580",
+      "properties": {
+        "@id": "way/536334580",
+        "amenity": "hospital",
+        "building": "yes",
+        "healthcare": "hospital",
+        "name": "RS Paru Jajar Surakarta",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7876261,
+          -7.5547652
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/536351972",
+      "properties": {
+        "@id": "way/536351972",
+        "amenity": "hospital",
+        "building": "yes",
+        "healthcare": "hospital",
+        "name": "RS Mata Solo",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7796929,
+          -7.547432
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/536387770",
+      "properties": {
+        "@id": "way/536387770",
+        "amenity": "pharmacy",
+        "building": "yes",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Apotek Sebelas Maret",
+        "operator": "UNS",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8572994,
+          -7.5557239
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/536583644",
+      "properties": {
+        "@id": "way/536583644",
+        "addr:full": "Jalan Adi Sucipto No.118, Jajar, Kec. Laweyan, Kota Surakarta, Jawa Tengah 57144",
+        "amenity": "hospital",
+        "building": "hospital",
+        "healthcare": "hospital",
+        "layer": "1",
+        "name": "Solo international Hospital",
+        "phone": "+62 271 7469100",
+        "website": "https://rs-jih.co.id/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7900827,
+          -7.5496793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/537047553",
+      "properties": {
+        "@id": "way/537047553",
+        "amenity": "clinic",
+        "building": "yes",
+        "name": "UPTD Puskesmas Pucangsawit",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8534794,
+          -7.5720538
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/579818064",
+      "properties": {
+        "@id": "way/579818064",
+        "amenity": "clinic",
+        "building": "yes",
+        "name": "Klinik Barokah Pajang Laweyan",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7839494,
+          -7.5671223
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/579872102",
+      "properties": {
+        "@id": "way/579872102",
+        "amenity": "clinic",
+        "building": "yes",
+        "healthcare": "clinic",
+        "name": "Klinik Anak Cerdas Ceria",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8065912,
+          -7.5431901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/580005945",
+      "properties": {
+        "@id": "way/580005945",
+        "addr:full": "Jalan Kolonel Sutarto No.16, Jebres",
+        "amenity": "hospital",
+        "building": "hospital",
+        "name": "Rumah Sakit Hermina Surakarta",
+        "name:en": "RS. Hermina Surakarta",
+        "operator:type": "private",
+        "website": "https://herminahospitals.com/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8402198,
+          -7.5602586
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/580009252",
+      "properties": {
+        "@id": "way/580009252",
+        "amenity": "hospital",
+        "building": "yes",
+        "name": "RS Triharsi Surakarta",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8247779,
+          -7.5573611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/580012527",
+      "properties": {
+        "@id": "way/580012527",
+        "amenity": "hospital",
+        "building": "yes",
+        "healthcare": "hospital",
+        "name": "RS Gigi dan Mulut UMS",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.806798,
+          -7.5649983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/580012539",
+      "properties": {
+        "@id": "way/580012539",
+        "amenity": "clinic",
+        "building": "yes",
+        "healthcare": "clinic",
+        "name": "Klinik Fisioterapi YPAC Surakarta",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8065547,
+          -7.5650961
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/580016746",
+      "properties": {
+        "@id": "way/580016746",
+        "amenity": "hospital",
+        "building": "hospital",
+        "healthcare": "hospital",
+        "name": "Klinik Mojosongo",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8385446,
+          -7.5370715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/636234558",
+      "properties": {
+        "@id": "way/636234558",
+        "amenity": "hospital",
+        "building": "hospital",
+        "healthcare": "hospital",
+        "name": "Puskesmas Sibela",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8459049,
+          -7.5359963
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/670874994",
+      "properties": {
+        "@id": "way/670874994",
+        "amenity": "clinic",
+        "building": "yes",
+        "name": "Puskesmas Ngoresan",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8623982,
+          -7.5525392
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/782898009",
+      "properties": {
+        "@id": "way/782898009",
+        "addr:city": "Surakarta",
+        "addr:full": "Jalan Slamet Riyadi No.404, Purwosari, Kec. Laweyan, Kota Surakarta, Jawa Tengah 57142",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "name": "RS Kasih Ibu",
+        "operator:type": "private",
+        "website": "https://rskasihibu.com/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8017574,
+          -7.5630553
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/782972077",
+      "properties": {
+        "@id": "way/782972077",
+        "addr:city": "Surakarta",
+        "addr:full": "Jalan Brigjend Katamso Nomor 55",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "RS Dokter Oen Kandang Sapi",
+        "operator:type": "private",
+        "website": "https://www.droenska.com/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8380389,
+          -7.5554899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/783804599",
+      "properties": {
+        "@id": "way/783804599",
+        "addr:city": "Surakarta",
+        "addr:full": "Jalan Kolonel Sutarto No.132, Jebres",
+        "addr:housenumber": "132",
+        "addr:street": "Jalan Kolonel Sutarto",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "name": "RSUD Dr. Moewardi Surakarta",
+        "name:etymology:wikidata": "Q7393215",
+        "name:etymology:wikipedia": "id:Moewardi",
+        "operator:type": "government",
+        "website": "https://rsmoewardi.com/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8422004,
+          -7.5581042
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/783881116",
+      "properties": {
+        "@id": "way/783881116",
+        "addr:city": "Surakarta",
+        "addr:full": "Jalan Brigjen Slamet Riyadi No. 321 Laweyan",
+        "addr:postcode": "57148",
+        "amenity": "hospital",
+        "contact:email": "rstslametriyadisolo@yahoo.co.id",
+        "contact:fax": "+62 271 726700",
+        "contact:phone": "+62 271 714656",
+        "contact:website": "https://rstslametriyadi.co.id",
+        "healthcare": "hospital",
+        "name": "RST Slamet Riyadi (DKT)",
+        "name:etymology:wikidata": "Q4188833",
+        "name:etymology:wikipedia": "id:Slamet Rijadi",
+        "opening_hours": "24/7",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8053805,
+          -7.5659519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/784987158",
+      "properties": {
+        "@id": "way/784987158",
+        "amenity": "hospital",
+        "building": "hospital",
+        "healthcare": "hospital",
+        "name": "Gedung Flamboyan RSUD Dr Moewardi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8428312,
+          -7.5573758
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/794227812",
+      "properties": {
+        "@id": "way/794227812",
+        "amenity": "pharmacy",
+        "building": "pharmacy",
+        "name": "Apotek Kimia Farma",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8439647,
+          -7.5588018
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/794661381",
+      "properties": {
+        "@id": "way/794661381",
+        "addr:full": "jl. Slamet Riyadi No.432, Purwosari, Laweyan, Surakarta, Jawa Tengah",
+        "amenity": "pharmacy",
+        "building": "yes",
+        "name": "Apotek 24 Purwosari",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8000527,
+          -7.5633603
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1092340526",
+      "properties": {
+        "@id": "way/1092340526",
+        "amenity": "clinic",
+        "building": "house",
+        "name": "Ndog",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8425755,
+          -7.5421701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1155618880",
+      "properties": {
+        "@id": "way/1155618880",
+        "amenity": "clinic",
+        "building": "house",
+        "name": "Beje",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7839321,
+          -7.5748508
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1155620714",
+      "properties": {
+        "@id": "way/1155620714",
+        "amenity": "clinic",
+        "building": "house",
+        "name": "She Jum",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8114059,
+          -7.5540195
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1207661815",
+      "properties": {
+        "@id": "way/1207661815",
+        "amenity": "clinic",
+        "building": "yes",
+        "healthcare": "clinic",
+        "name": "Laboratorium Klinik Redy",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8356192,
+          -7.5357839
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1220661041",
+      "properties": {
+        "@id": "way/1220661041",
+        "amenity": "hospital",
+        "name": "Rumah Sakit Bhayangkara",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8019931,
+          -7.5543896
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1220662856",
+      "properties": {
+        "@id": "way/1220662856",
+        "amenity": "hospital",
+        "building": "yes",
+        "healthcare": "hospital",
+        "name": "RS Bhayangkara Surakarta",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8019115,
+          -7.5544353
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1388134222",
+      "properties": {
+        "@id": "way/1388134222",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "physiatry",
+        "name": "RSJD SURAKARTA",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8634745,
+          -7.5570271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1472873980",
+      "properties": {
+        "@id": "way/1472873980",
+        "alt_name": "Rumah Sakit Kardiologi Emirates Indonesia",
+        "amenity": "hospital",
+        "name": "Rumah Sakit Jantung Emirates Indonesia",
+        "name:en": "Emirates Indonesia Cardiology Hospital",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8523641,
+          -7.5531242
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2504599259",
+      "properties": {
+        "@id": "node/2504599259",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "name": "RS Panti Waluyo Solo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7900979,
+          -7.5603709
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4052305104",
+      "properties": {
+        "@id": "node/4052305104",
+        "amenity": "clinic",
+        "name": "Posyandu Permata Bunda"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.817449,
+          -7.5515298
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4052331290",
+      "properties": {
+        "@id": "node/4052331290",
+        "amenity": "hospital",
+        "name": "Rumah Sakit Brayat Minulya"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8146808,
+          -7.5517478
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4052331291",
+      "properties": {
+        "@id": "node/4052331291",
+        "amenity": "hospital",
+        "name": "Rumah Sakit Brayat Minulya"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8144577,
+          -7.5524343
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4114619997",
+      "properties": {
+        "@id": "node/4114619997",
+        "amenity": "clinic",
+        "name": "Posyandu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8218586,
+          -7.559709
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4114619998",
+      "properties": {
+        "@id": "node/4114619998",
+        "amenity": "clinic",
+        "name": "Puskesmas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.822507,
+          -7.5599709
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4123315092",
+      "properties": {
+        "@id": "node/4123315092",
+        "amenity": "pharmacy",
+        "name": "Apotek Sari Asih"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8322421,
+          -7.5699379
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4123315104",
+      "properties": {
+        "@id": "node/4123315104",
+        "amenity": "clinic",
+        "name": "Klinik Tusuk Jarum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8325335,
+          -7.5698281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4123315124",
+      "properties": {
+        "@id": "node/4123315124",
+        "amenity": "pharmacy",
+        "name": "Toko Obat Ikan Mas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8320584,
+          -7.5698907
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4123315128",
+      "properties": {
+        "@id": "node/4123315128",
+        "amenity": "pharmacy",
+        "name": "Toko Shinse Ketandan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8327375,
+          -7.5699952
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4123315129",
+      "properties": {
+        "@id": "node/4123315129",
+        "amenity": "pharmacy",
+        "name": "Toko Shinse Sari Alam"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8327014,
+          -7.5699904
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4134668843",
+      "properties": {
+        "@id": "node/4134668843",
+        "addr:housenumber": "47",
+        "addr:street": "Jalan S. Parman",
+        "amenity": "clinic",
+        "name": "Nakamura Holistic Therapy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.823772,
+          -7.5629831
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4134668846",
+      "properties": {
+        "@id": "node/4134668846",
+        "amenity": "clinic",
+        "name": "Rumah Terapi Air Teknologi Jepang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8231962,
+          -7.5628472
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4140291291",
+      "properties": {
+        "@id": "node/4140291291",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Apotek Widuran"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8283714,
+          -7.5647706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4140291294",
+      "properties": {
+        "@id": "node/4140291294",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "name": "Rumah Praktek Dr. J. Ridwan T Sugiarto Sp. Anak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8277046,
+          -7.5646081
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4140291300",
+      "properties": {
+        "@id": "node/4140291300",
+        "amenity": "pharmacy",
+        "name": "Toko Obat Tambak Segaran"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8272725,
+          -7.5644314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4202317688",
+      "properties": {
+        "@id": "node/4202317688",
+        "amenity": "doctors",
+        "name": "Dr. H. Sutrisno"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8336088,
+          -7.5700978
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4202318004",
+      "properties": {
+        "@id": "node/4202318004",
+        "amenity": "pharmacy",
+        "name": "Toko Obat Herbal Kretek Gantung"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8332405,
+          -7.5708633
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4707633089",
+      "properties": {
+        "@id": "node/4707633089",
+        "addr:street": "Jalan Kapten Mulyadi",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Kustati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.831243,
+          -7.5812698
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5683659121",
+      "properties": {
+        "@id": "node/5683659121",
+        "addr:street": "Jalan Yosodipuro",
+        "amenity": "clinic",
+        "name": "Naava Green Skincare"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.813954,
+          -7.5631303
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6130196537",
+      "properties": {
+        "@id": "node/6130196537",
+        "amenity": "clinic",
+        "name": "Posyandu Ngemplak Sutan RW 37",
+        "operator": "Bu Dastri"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8573709,
+          -7.5448411
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8146567029",
+      "properties": {
+        "@id": "node/8146567029",
+        "amenity": "pharmacy",
+        "name": "Apotek Setia Budi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8230529,
+          -7.5540783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8922068306",
+      "properties": {
+        "@id": "node/8922068306",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "RS PKU Muhammadiyah Surakarta"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8166391,
+          -7.5649652
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9780831658",
+      "properties": {
+        "@id": "node/9780831658",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Puskesmas Banyuanyar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8085547,
+          -7.5374419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9781225896",
+      "properties": {
+        "@id": "node/9781225896",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Puskesmas Pembantu Karangasem"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7795848,
+          -7.5524817
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9781404981",
+      "properties": {
+        "@id": "node/9781404981",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Klinik Utama Kasih Ibu Sehati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7830477,
+          -7.5585728
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9781405012",
+      "properties": {
+        "@id": "node/9781405012",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "PUSKESMAS Pembantu Wangkung",
+        "operator": "Ministry of Health",
+        "operator:en": "Ministry of Health",
+        "operator:id": "Kementerian Kesehatan",
+        "operator:type": "government",
+        "operator:wikidata": "Q12490745"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7875502,
+          -7.567984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9783077638",
+      "properties": {
+        "@id": "node/9783077638",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "PUSKESMAS Pembantu Krembyongan",
+        "operator": "Ministry of Health",
+        "operator:en": "Ministry of Health",
+        "operator:id": "Kementerian Kesehatan",
+        "operator:type": "government",
+        "operator:wikidata": "Q12490745"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8128195,
+          -7.5327225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9783077676",
+      "properties": {
+        "@id": "node/9783077676",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "PUSKESMAS Pembantu Minapadi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8186374,
+          -7.5481458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9783077687",
+      "properties": {
+        "@id": "node/9783077687",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "UPT PUSKESMAS Nusukan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.819665,
+          -7.5419839
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9783077693",
+      "properties": {
+        "@id": "node/9783077693",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Klinik Sriwijaya"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8185496,
+          -7.5436241
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9783253674",
+      "properties": {
+        "@id": "node/9783253674",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "PUSKESMAS Pembantu Cengklik"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8292728,
+          -7.5488799
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9784408212",
+      "properties": {
+        "@id": "node/9784408212",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "PUSKESMAS Gilingan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8347087,
+          -7.5559781
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9784408221",
+      "properties": {
+        "@id": "node/9784408221",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "PUSKESMAS Pembantu Kandang Sapi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8413341,
+          -7.5553078
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9784586732",
+      "properties": {
+        "@id": "node/9784586732",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Klinik Pratama Aisyiyah"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8490941,
+          -7.5572528
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9787199287",
+      "properties": {
+        "@id": "node/9787199287",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Rumah Sakit PKU Muhammadiyah"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.836432,
+          -7.5816944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9787216119",
+      "properties": {
+        "@id": "node/9787216119",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Apotek Ayo Sehat"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8322548,
+          -7.5771288
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9789389237",
+      "properties": {
+        "@id": "node/9789389237",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "name": "dr. Maria Rini Indarti, M.Kes, SpKJ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8143655,
+          -7.5556716
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9789389243",
+      "properties": {
+        "@id": "node/9789389243",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Apotek Gunung Jati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8121394,
+          -7.5537963
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9789389250",
+      "properties": {
+        "@id": "node/9789389250",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Klinik Tanihara"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8134047,
+          -7.5518975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9789394532",
+      "properties": {
+        "@id": "node/9789394532",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "VIVA Apotek"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7697151,
+          -7.5498142
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9822011343",
+      "properties": {
+        "@id": "node/9822011343",
+        "amenity": "hospital",
+        "name": "Puskesmas Manahan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7999274,
+          -7.5571261
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9823965410",
+      "properties": {
+        "@id": "node/9823965410",
+        "amenity": "clinic",
+        "beauty": "skin_care",
+        "healthcare": "clinic",
+        "name": "Dr Norma Aesthetic Clinic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8377414,
+          -7.5621015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9825141254",
+      "properties": {
+        "@id": "node/9825141254",
+        "amenity": "pharmacy",
+        "brand": "Kimia Farma",
+        "brand:wikidata": "Q11264892",
+        "healthcare": "pharmacy",
+        "name": "Kimia Farma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8021446,
+          -7.5708467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9825341732",
+      "properties": {
+        "@id": "node/9825341732",
+        "amenity": "clinic",
+        "beauty": "skin_care",
+        "healthcare": "clinic",
+        "healthcare:speciality": "dermatology",
+        "name": "Natasha Skin Clinic Center Laweyan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8013664,
+          -7.5707936
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9828494254",
+      "properties": {
+        "@id": "node/9828494254",
+        "amenity": "pharmacy",
+        "brand": "Kimia Farma",
+        "brand:wikidata": "Q11264892",
+        "healthcare": "pharmacy",
+        "name": "Kimia Farma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8111614,
+          -7.5617757
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9830409215",
+      "properties": {
+        "@id": "node/9830409215",
+        "amenity": "clinic",
+        "name": "Klinik Mommies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8197464,
+          -7.5609697
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9830435067",
+      "properties": {
+        "@id": "node/9830435067",
+        "addr:housenumber": "64",
+        "addr:street": "Jl. Dr. Soepomo",
+        "amenity": "pharmacy",
+        "name": "Apotek Jati Waluya",
+        "phone": "+62271714741"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8152177,
+          -7.5615377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9833067830",
+      "properties": {
+        "@id": "node/9833067830",
+        "amenity": "clinic",
+        "name": "Puskesmas Gambirsari"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8277982,
+          -7.544758
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9837927182",
+      "properties": {
+        "@id": "node/9837927182",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Rumah Bersalin Bunda"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8343666,
+          -7.5627694
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9837940810",
+      "properties": {
+        "@id": "node/9837940810",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Bidan Selfi Rawung SKM Jebres"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8451674,
+          -7.5561394
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9837977477",
+      "properties": {
+        "@id": "node/9837977477",
+        "amenity": "clinic",
+        "beauty": "skin_care",
+        "healthcare": "clinic",
+        "healthcare:speciality": "dermatology",
+        "name": "Be Hati Skin Care & Esthetic Clinic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8099147,
+          -7.5659726
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12805140349",
+      "properties": {
+        "@id": "node/12805140349",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Puskesmas Krembyongan",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8129114,
+          -7.5326993
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12805140350",
+      "properties": {
+        "@id": "node/12805140350",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Puskesmas Krembyongan",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8129765,
+          -7.5326988
+        ]
+      }
+    }
+  ]
+}
