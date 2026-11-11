@@ -148,7 +148,7 @@ export function buildKelurahanUnits(input: UnitBuildInput): UnitBuildResult {
     }
   }
   if (unassignedOsm > 0) {
-    issues.push(`${unassignedOsm} titik OSM berada di luar poligon kelurahan`);
+    issues.push(`${unassignedOsm} titik fasilitas berada di luar poligon kelurahan`);
   }
 
   return { units, issues };

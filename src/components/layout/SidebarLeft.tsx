@@ -236,6 +236,36 @@ export default function SidebarLeft({
             </div>
           )}
         </section>
+
+        <section>
+          <SectionTitle>Sumber Data</SectionTitle>
+          <dl className="flex flex-col gap-2 rounded-xl border border-white/10 bg-panel-2/50 px-3 py-2.5 text-[11px] leading-relaxed">
+            <div className="flex items-start justify-between gap-3">
+              <dt className="shrink-0 text-muted">Kependudukan (2024)</dt>
+              <dd className="text-right text-ink/90">BPS Kota Surakarta</dd>
+            </div>
+            <div className="flex items-start justify-between gap-3">
+              <dt className="shrink-0 text-muted">Rumah sakit</dt>
+              <dd className="text-right text-ink/90">RS Online (Kemenkes)</dd>
+            </div>
+            <div className="flex items-start justify-between gap-3">
+              <dt className="shrink-0 text-muted">Puskesmas</dt>
+              <dd className="text-right text-ink/90">OpenStreetMap</dd>
+            </div>
+            <div className="flex items-start justify-between gap-3">
+              <dt className="shrink-0 text-muted">Klinik pratama</dt>
+              <dd className="text-right text-ink/90">OpenStreetMap</dd>
+            </div>
+            <div className="flex items-start justify-between gap-3">
+              <dt className="shrink-0 text-muted">Apotek</dt>
+              <dd className="text-right text-ink/90">OpenStreetMap</dd>
+            </div>
+            <div className="flex items-start justify-between gap-3 border-t border-white/5 pt-2">
+              <dt className="shrink-0 text-muted">Koordinat lokasi</dt>
+              <dd className="text-right text-ink/90">Google Maps</dd>
+            </div>
+          </dl>
+        </section>
       </div>
     </aside>
   );

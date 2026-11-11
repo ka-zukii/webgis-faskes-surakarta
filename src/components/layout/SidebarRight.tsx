@@ -114,7 +114,14 @@ function FacilityDetail({
           label="Status verifikasi"
           value={facility.statusVerifikasi.replace(/_/g, " ") || NOT_AVAILABLE}
         />
-        <DetailRow label="Sumber" value={`OSM ${facility.osmRef}`} />
+        <DetailRow
+          label="Sumber"
+          value={
+            facility.tipe === "hospital"
+              ? "RS Online (Kemenkes)"
+              : `OpenStreetMap ${facility.osmRef}`
+          }
+        />
       </dl>
 
       <p className="text-[11px] leading-relaxed text-muted">
@@ -185,13 +192,13 @@ function KelurahanDetail({
               : `${formatCount(Math.round(density))} jiwa/km²`
           }
         />
-        <DetailRow label="Rumah sakit (OSM)" value={formatCount(unit.rs)} />
+        <DetailRow label="Rumah sakit (RS Online)" value={formatCount(unit.rs)} />
         <DetailRow
-          label="Puskesmas (OSM)"
+          label="Puskesmas (OpenStreetMap)"
           value={formatCount(unit.puskesmas)}
         />
-        <DetailRow label="Klinik (OSM)" value={formatCount(unit.klinik)} />
-        <DetailRow label="Apotek (OSM)" value={formatCount(unit.apotek)} />
+        <DetailRow label="Klinik (OpenStreetMap)" value={formatCount(unit.klinik)} />
+        <DetailRow label="Apotek (OpenStreetMap)" value={formatCount(unit.apotek)} />
         <DetailRow
           label="Total fasilitas"
           value={formatCount(totalFacilities(unit))}
@@ -233,8 +240,8 @@ function KelurahanDetail({
       )}
 
       <p className="text-[11px] leading-relaxed text-muted">
-        Jarak dihitung garis lurus dari pusat wilayah ke titik OSM terdekat,
-        bukan waktu tempuh. RS dan puskesmas memakai titik OSM di dalam wilayah.
+        Jarak dihitung garis lurus dari pusat wilayah ke titik fasilitas terdekat,
+        bukan waktu tempuh. RS dan puskesmas memakai titik fasilitas di dalam wilayah.
       </p>
     </div>
   );
@@ -314,10 +321,10 @@ function KecamatanDetail({
               : "-"
           }
         />
-        <DetailRow label="Rumah sakit (OSM)" value={formatCount(rs)} />
-        <DetailRow label="Puskesmas (OSM)" value={formatCount(puskesmas)} />
-        <DetailRow label="Klinik (OSM)" value={formatCount(klinik)} />
-        <DetailRow label="Apotek (OSM)" value={formatCount(apotek)} />
+        <DetailRow label="Rumah sakit (RS Online)" value={formatCount(rs)} />
+        <DetailRow label="Puskesmas (OpenStreetMap)" value={formatCount(puskesmas)} />
+        <DetailRow label="Klinik (OpenStreetMap)" value={formatCount(klinik)} />
+        <DetailRow label="Apotek (OpenStreetMap)" value={formatCount(apotek)} />
         <DetailRow label="Total fasilitas" value={formatCount(total)} />
         <DetailRow
           label="Indeks kapasitas"
@@ -467,7 +474,7 @@ function Summary({
         className="animate-fade-in-up rounded-xl border border-white/5 bg-panel-2/50 px-3"
         style={{ animationDelay: "80ms" }}
       >
-        <DetailRow label="Total fasilitas (OSM)" value={formatCount(total)} />
+        <DetailRow label="Total fasilitas" value={formatCount(total)} />
         <DetailRow label="Kelurahan" value={formatCount(city.kelurahan)} />
         <DetailRow label="Kecamatan" value={formatCount(stats.length)} />
         <DetailRow
@@ -475,7 +482,7 @@ function Summary({
           value={population > 0 ? formatCount(population) : NOT_AVAILABLE}
         />
         <DetailRow
-          label="RS / puskesmas (OSM)"
+          label="RS / puskesmas"
           value={`${formatCount(city.rs)} / ${formatCount(city.puskesmas)}`}
         />
         <DetailRow
@@ -518,10 +525,10 @@ function Summary({
         title="Fasilitas per kecamatan"
         delayMs={160}
         legend={[
-          { label: "RS (OSM)", color: FACILITY_META.hospital.color },
-          { label: "Puskesmas (OSM)", color: FACILITY_META.puskesmas.color },
-          { label: "Klinik (OSM)", color: FACILITY_META.clinic.color },
-          { label: "Apotek (OSM)", color: FACILITY_META.pharmacy.color },
+          { label: "RS (RS Online)", color: FACILITY_META.hospital.color },
+          { label: "Puskesmas (OpenStreetMap)", color: FACILITY_META.puskesmas.color },
+          { label: "Klinik (OpenStreetMap)", color: FACILITY_META.clinic.color },
+          { label: "Apotek (OpenStreetMap)", color: FACILITY_META.pharmacy.color },
         ]}
         rows={facilityRows}
       />
@@ -545,7 +552,7 @@ function Summary({
         style={{ animationDelay: "280ms" }}
       >
         Indeks kapasitas bergantung pada bobot di sidebar kiri. Seluruh
-        fasilitas dihitung dari titik OSM di dalam wilayah kelurahan.
+        fasilitas dihitung dari titik fasilitas di dalam wilayah kelurahan.
       </p>
     </div>
   );

@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
-import { MapPin, Maximize, Minimize, RotateCcw } from "lucide-react";
+import { useCallback, useEffect, useState } from "react";
+import { BookOpen, MapPin, Maximize, Minimize, RotateCcw } from "lucide-react";
 import type { LoadStatus } from "@/types";
 import { formatDateId } from "@/utils/format";
 import SearchBox, { type SearchItem } from "@/components/layout/SearchBox";
+import GuideModal from "@/components/layout/GuideModal";
 
 interface TopbarProps {
   facilityStatus: LoadStatus;
@@ -30,6 +31,8 @@ export default function Topbar({
   onSearchPick,
 }: TopbarProps) {
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [guideOpen, setGuideOpen] = useState(false);
+  const closeGuide = useCallback(() => setGuideOpen(false), []);
 
   useEffect(() => {
     const handler = () => setIsFullscreen(Boolean(document.fullscreenElement));
@@ -50,9 +53,10 @@ export default function Topbar({
       ? "Memuat data fasilitas…"
       : facilityStatus === "error"
         ? facilityError ?? "Data gagal dimuat"
-        : `Fasilitas OSM · ${formatDateId(sourceTimestamp)}`;
+        : `Fasilitas OpenStreetMap · ${formatDateId(sourceTimestamp)}`;
 
   return (
+    <>
     <header className="glass relative z-30 flex h-14 shrink-0 items-center justify-between gap-4 border-x-0 border-t-0 px-4">
       <div className="flex min-w-0 items-center gap-3">
         <div
@@ -94,6 +98,15 @@ export default function Topbar({
 
         <button
           type="button"
+          onClick={() => setGuideOpen(true)}
+          className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-panel-2/70 px-3 py-1.5 text-xs font-medium text-ink transition hover:border-accent/50 hover:text-accent"
+        >
+          <BookOpen size={14} />
+          Panduan &amp; Metodologi
+        </button>
+
+        <button
+          type="button"
           onClick={onReset}
           className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-panel-2/70 px-3 py-1.5 text-xs font-medium text-ink transition hover:border-accent/50 hover:text-accent"
         >
@@ -111,5 +124,7 @@ export default function Topbar({
         </button>
       </div>
     </header>
+      <GuideModal open={guideOpen} onClose={closeGuide} />
+    </>
   );
 }
