@@ -33,7 +33,11 @@ export function parseFacilityCollection(raw: unknown): FacilityDataset {
   let skipped = 0;
 
   raw.features.forEach((feature: unknown, index: number) => {
-    if (!isRecord(feature) || !isRecord(feature.geometry) || !isRecord(feature.properties)) {
+    if (
+      !isRecord(feature) ||
+      !isRecord(feature.geometry) ||
+      !isRecord(feature.properties)
+    ) {
       skipped += 1;
       return;
     }
@@ -62,9 +66,9 @@ export function parseFacilityCollection(raw: unknown): FacilityDataset {
       id: `${osmRef || "fac"}-${index}`,
       nama: asString(properties.name, "Tanpa nama"),
       tipe,
-      alamat: "",
-      kelurahan: "",
-      kecamatan: "",
+      alamat: asString(properties.alamat),
+      kelurahan: asString(properties.kelurahan),
+      kecamatan: asString(properties.kecamatan),
       latitude: lat,
       longitude: lon,
       kategoriAsli: kategori,
@@ -82,8 +86,12 @@ export function parseFacilityCollection(raw: unknown): FacilityDataset {
   };
 }
 
-export async function loadFacilities(signal?: AbortSignal): Promise<FacilityDataset> {
-  const response = await fetch(dataUrl("healthmap-fasilitas-utama.geojson"), { signal });
+export async function loadFacilities(
+  signal?: AbortSignal,
+): Promise<FacilityDataset> {
+  const response = await fetch(dataUrl("healthmap-fasilitas-utama.geojson"), {
+    signal,
+  });
   if (!response.ok) {
     throw new Error(`Gagal memuat data fasilitas (HTTP ${response.status})`);
   }

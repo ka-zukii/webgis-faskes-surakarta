@@ -1,7 +1,18 @@
 import { useEffect, useMemo, useState } from "react";
-import { loadOptionalGeoJson, type GeoJsonFeatureCollection } from "@/services/geojson.service";
-import { loadKelurahanTables, type KelurahanTables } from "@/services/kelurahan-data.service";
-import { buildKecamatanShapes, buildKelurahanUnits, type KecamatanShape, type KelurahanUnit } from "@/features/analysis/units";
+import {
+  loadOptionalGeoJson,
+  type GeoJsonFeatureCollection,
+} from "@/services/geojson.service";
+import {
+  loadKelurahanTables,
+  type KelurahanTables,
+} from "@/services/kelurahan-data.service";
+import {
+  buildKecamatanShapes,
+  buildKelurahanUnits,
+  type KecamatanShape,
+  type KelurahanUnit,
+} from "@/features/analysis/units";
 import type { HealthcareFacility } from "@/types";
 
 export type AnalysisStatus = "loading" | "ready" | "missing" | "error";
@@ -35,8 +46,11 @@ const EMPTY: AnalysisData = {
   error: null,
 };
 
-/** Memuat batas wilayah dan tabel BPS, lalu menggabungkannya dengan titik fasilitas. */
-export function useAnalysisData(facilities: HealthcareFacility[], facilitiesReady: boolean): AnalysisData {
+/** Memuat batas wilayah dan tabel penduduk, lalu menggabungkannya dengan titik fasilitas OSM. */
+export function useAnalysisData(
+  facilities: HealthcareFacility[],
+  facilitiesReady: boolean,
+): AnalysisData {
   const [raw, setRaw] = useState<RawState | null>(null);
 
   useEffect(() => {
@@ -45,7 +59,8 @@ export function useAnalysisData(facilities: HealthcareFacility[], facilitiesRead
       (data): RawState["tables"] => ({ ok: true, data }),
       (error: unknown): RawState["tables"] => ({
         ok: false,
-        message: error instanceof Error ? error.message : "Gagal memuat tabel wilayah",
+        message:
+          error instanceof Error ? error.message : "Gagal memuat tabel wilayah",
       }),
     );
 
@@ -54,7 +69,8 @@ export function useAnalysisData(facilities: HealthcareFacility[], facilitiesRead
       loadOptionalGeoJson("kecamatan.geojson", controller.signal),
       tables,
     ]).then(([kelurahan, kecamatan, tableResult]) => {
-      if (!controller.signal.aborted) setRaw({ kelurahan, kecamatan, tables: tableResult });
+      if (!controller.signal.aborted)
+        setRaw({ kelurahan, kecamatan, tables: tableResult });
     });
 
     return () => controller.abort();
@@ -74,17 +90,20 @@ export function useAnalysisData(facilities: HealthcareFacility[], facilitiesRead
     const { units, issues } = buildKelurahanUnits({
       boundaries: raw.kelurahan.data,
       penduduk: tables?.penduduk ?? [],
-      bps: tables?.bps ?? [],
       facilities,
     });
-    const kecamatan = raw.kecamatan.state === "available" ? buildKecamatanShapes(raw.kecamatan.data) : [];
+    const kecamatan =
+      raw.kecamatan.state === "available"
+        ? buildKecamatanShapes(raw.kecamatan.data)
+        : [];
     const allIssues = raw.tables.ok ? issues : [raw.tables.message, ...issues];
 
     return {
       status: "ready",
       units,
       kecamatan,
-      populationReady: tables !== null && units.some((unit) => unit.hasPopulation),
+      populationReady:
+        tables !== null && units.some((unit) => unit.hasPopulation),
       issues: allIssues,
       error: null,
     };

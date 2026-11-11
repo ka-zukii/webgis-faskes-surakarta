@@ -24,7 +24,17 @@ interface FacilityMarkerProps {
   onSelect: (id: string) => void;
 }
 
-function FacilityMarker({ facility, lift, highlighted, selected, onHover, onSelect }: FacilityMarkerProps) {
+/** Area sentuh lebih besar dari marker agar mudah di-hover. */
+const HIT_RADIUS = 0.12;
+
+function FacilityMarker({
+  facility,
+  lift,
+  highlighted,
+  selected,
+  onHover,
+  onSelect,
+}: FacilityMarkerProps) {
   const { x, z } = lonLatToScene(facility.longitude, facility.latitude);
   const color = FACILITY_META[facility.tipe].color;
   const active = highlighted || selected;
@@ -33,7 +43,6 @@ function FacilityMarker({ facility, lift, highlighted, selected, onHover, onSele
     <group position={[x, lift, z]}>
       <mesh
         position={[0, 0.06, 0]}
-        scale={active ? 1.8 : 1}
         onPointerOver={(event: ThreeEvent<PointerEvent>) => {
           event.stopPropagation();
           document.body.style.cursor = "pointer";
@@ -48,6 +57,15 @@ function FacilityMarker({ facility, lift, highlighted, selected, onHover, onSele
           onSelect(facility.id);
         }}
       >
+        <sphereGeometry args={[HIT_RADIUS, 8, 8]} />
+        <meshBasicMaterial transparent opacity={0} depthWrite={false} />
+      </mesh>
+
+      <mesh
+        position={[0, 0.06, 0]}
+        scale={active ? 1.8 : 1}
+        raycast={() => null}
+      >
         <cylinderGeometry args={[0.03, 0.03, 0.12, 16]} />
         <meshStandardMaterial
           color={color}
@@ -58,7 +76,11 @@ function FacilityMarker({ facility, lift, highlighted, selected, onHover, onSele
         />
       </mesh>
       {active && (
-        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.004, 0]}>
+        <mesh
+          rotation={[-Math.PI / 2, 0, 0]}
+          position={[0, 0.004, 0]}
+          raycast={() => null}
+        >
           <ringGeometry args={[0.07, 0.1, 32]} />
           <meshBasicMaterial color={color} transparent opacity={0.85} />
         </mesh>

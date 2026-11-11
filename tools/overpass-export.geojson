@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "generator": "overpass-turbo",
   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
-  "timestamp": "2026-11-06T13:58:24Z",
+  "timestamp": "2026-11-11T03:36:36Z",
   "features": [
     {
       "type": "Feature",
@@ -31,6 +31,26 @@
     },
     {
       "type": "Feature",
+      "id": "way/127059875",
+      "properties": {
+        "@id": "way/127059875",
+        "addr:city": "Surakarta",
+        "addr:full": "Jalan Ronggowarsito No.130, Timuran, Kec. Banjarsari, Kota Surakarta, Jawa Tengah 57131",
+        "area": "yes",
+        "name": "RS PKU Muhammadiyah",
+        "operator:type": "private",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.816603,
+          -7.5650065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
       "id": "way/225531507",
       "properties": {
         "@id": "way/225531507",
@@ -46,6 +66,108 @@
         "coordinates": [
           110.790728,
           -7.5600382
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/227765118",
+      "properties": {
+        "@id": "way/227765118",
+        "addr:city": "Karanganyar",
+        "addr:housename": "Puskesmas",
+        "addr:street": "Nusa Indah Perumnas Palur",
+        "amenity": "clinic",
+        "building": "yes",
+        "healthcare": "clinic",
+        "name": "Pustu Sawo Perumnas Palur Ngringo",
+        "operator": "Ministry of Health",
+        "operator:en": "Ministry of Health",
+        "operator:id": "Kementerian Kesehatan",
+        "operator:wikidata": "Q12490745",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.872058,
+          -7.5569198
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/325359383",
+      "properties": {
+        "@id": "way/325359383",
+        "addr:city": "Sukoharjo",
+        "addr:full": "Jl. General Ahmad Yani, Pabelan, Kartasura, Mendungan, Pabelan, Kec. Kartasura, Kabupaten Sukoharjo, Jawa Tengah 57162",
+        "amenity": "hospital",
+        "name": "RSI Surakarta",
+        "operator:type": "private",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7707427,
+          -7.5580627
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/325385427",
+      "properties": {
+        "@id": "way/325385427",
+        "amenity": "hospital",
+        "name": "RSUD Ngipang",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8127393,
+          -7.5261741
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/332232758",
+      "properties": {
+        "@id": "way/332232758",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Rumah Sakit UNS",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7732323,
+          -7.5593599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/347458944",
+      "properties": {
+        "@id": "way/347458944",
+        "addr:full": "Perumahan Solo Baru Sukoharjo PO.BOX 130 Jateng",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "RS Dr. Oen Solo Baru",
+        "operator:type": "government",
+        "website": "https://droensolobaru.com/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7981702,
+          -7.6063941
         ]
       }
     },
@@ -122,24 +244,6 @@
     },
     {
       "type": "Feature",
-      "id": "way/535045567",
-      "properties": {
-        "@id": "way/535045567",
-        "amenity": "clinic",
-        "building": "yes",
-        "name": "Posyandu Melati Joyosuran",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8269435,
-          -7.5897254
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "way/535243348",
       "properties": {
         "@id": "way/535243348",
@@ -153,25 +257,6 @@
         "coordinates": [
           110.8239768,
           -7.578576
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/535599666",
-      "properties": {
-        "@id": "way/535599666",
-        "amenity": "doctors",
-        "building": "yes",
-        "healthcare": "doctor",
-        "name": "Dokter Isdaryanto",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8214061,
-          -7.5496378
         ]
       }
     },
@@ -314,6 +399,46 @@
     },
     {
       "type": "Feature",
+      "id": "way/569488250",
+      "properties": {
+        "@id": "way/569488250",
+        "addr:city": "Colomadu",
+        "addr:street": "Jalan Adi Sucipto",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Puskemas Colomadu",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7524032,
+          -7.5334584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/569700309",
+      "properties": {
+        "@id": "way/569700309",
+        "amenity": "pharmacy",
+        "building": "yes",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Apotek",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7628347,
+          -7.5400856
+        ]
+      }
+    },
+    {
+      "type": "Feature",
       "id": "way/579818064",
       "properties": {
         "@id": "way/579818064",
@@ -410,25 +535,6 @@
     },
     {
       "type": "Feature",
-      "id": "way/580012539",
-      "properties": {
-        "@id": "way/580012539",
-        "amenity": "clinic",
-        "building": "yes",
-        "healthcare": "clinic",
-        "name": "Klinik Fisioterapi YPAC Surakarta",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8065547,
-          -7.5650961
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "way/580016746",
       "properties": {
         "@id": "way/580016746",
@@ -485,6 +591,24 @@
     },
     {
       "type": "Feature",
+      "id": "way/686044071",
+      "properties": {
+        "@id": "way/686044071",
+        "amenity": "clinic",
+        "building": "house",
+        "name": "Mas Guru",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7717571,
+          -7.5296398
+        ]
+      }
+    },
+    {
+      "type": "Feature",
       "id": "way/782898009",
       "properties": {
         "@id": "way/782898009",
@@ -525,6 +649,29 @@
         "coordinates": [
           110.8380389,
           -7.5554899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/783089083",
+      "properties": {
+        "@id": "way/783089083",
+        "addr:city": "Sukoharjo",
+        "addr:full": "Jalan A. Yani No.157, Mendungan, Pabelan, Kec. Kartasura, Kabupaten Sukoharjo, Jawa Tengah 57162",
+        "amenity": "hospital",
+        "name": "RS Ortopedi Dr. Soeharso",
+        "name:etymology:wikidata": "Q4996281",
+        "name:etymology:wikipedia": "id:Suharso",
+        "operator:type": "government",
+        "website": "https://www.rso.go.id/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7738013,
+          -7.5567445
         ]
       }
     },
@@ -640,6 +787,65 @@
     },
     {
       "type": "Feature",
+      "id": "way/1002806519",
+      "properties": {
+        "@id": "way/1002806519",
+        "amenity": "clinic",
+        "building": "yes",
+        "healthcare": "clinic",
+        "name": "Klinik BersalinNgudi Saras",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.876616,
+          -7.5550344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1008941288",
+      "properties": {
+        "@id": "way/1008941288",
+        "amenity": "clinic",
+        "building": "yes",
+        "healthcare": "clinic",
+        "name": "Puskesmas Jaten 2",
+        "operator": "Ministry of Health",
+        "operator:en": "Ministry of Health",
+        "operator:id": "Kementerian Kesehatan",
+        "operator:wikidata": "Q12490745",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8757041,
+          -7.5500774
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1092298332",
+      "properties": {
+        "@id": "way/1092298332",
+        "building": "hospital",
+        "name": "RS Mojosongo 2",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8744123,
+          -7.555463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
       "id": "way/1092340526",
       "properties": {
         "@id": "way/1092340526",
@@ -653,6 +859,58 @@
         "coordinates": [
           110.8425755,
           -7.5421701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1110941621",
+      "properties": {
+        "@id": "way/1110941621",
+        "healthcare": "clinic",
+        "name": "Puskesmas Jaten 2",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8789701,
+          -7.5546385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1110943566",
+      "properties": {
+        "@id": "way/1110943566",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8744909,
+          -7.5552682
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1117328783",
+      "properties": {
+        "@id": "way/1117328783",
+        "amenity": "clinic",
+        "building": "house",
+        "name": "Santo",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7548253,
+          -7.5325944
         ]
       }
     },
@@ -713,6 +971,25 @@
     },
     {
       "type": "Feature",
+      "id": "way/1217246629",
+      "properties": {
+        "@id": "way/1217246629",
+        "amenity": "clinic",
+        "building": "yes",
+        "healthcare": "clinic",
+        "name": "Klinik Saras",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7575704,
+          -7.5408684
+        ]
+      }
+    },
+    {
+      "type": "Feature",
       "id": "way/1220661041",
       "properties": {
         "@id": "way/1220661041",
@@ -768,6 +1045,30 @@
     },
     {
       "type": "Feature",
+      "id": "way/1455742112",
+      "properties": {
+        "@id": "way/1455742112",
+        "addr:city": "Kabupaten Sukoharjo",
+        "addr:full": "Jalan Palem Raya, Dusun III, Langenharjo, Kecamatan Grogol, Kabupaten Sukoharjo, Jawa Tengah 57552",
+        "addr:province": "Jawa Tengah",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "RSU Indriati Solo Baru",
+        "operator:type": "private",
+        "website": "https://rsindriati.com/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8086201,
+          -7.6112509
+        ]
+      }
+    },
+    {
+      "type": "Feature",
       "id": "way/1472873980",
       "properties": {
         "@id": "way/1472873980",
@@ -787,6 +1088,22 @@
     },
     {
       "type": "Feature",
+      "id": "node/2504599254",
+      "properties": {
+        "@id": "node/2504599254",
+        "emergency": "yes",
+        "name": "RS Dokter Oen Solo Baru"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.797489,
+          -7.6077419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
       "id": "node/2504599259",
       "properties": {
         "@id": "node/2504599259",
@@ -799,22 +1116,6 @@
         "coordinates": [
           110.7900979,
           -7.5603709
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "node/4052305104",
-      "properties": {
-        "@id": "node/4052305104",
-        "amenity": "clinic",
-        "name": "Posyandu Permata Bunda"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.817449,
-          -7.5515298
         ]
       }
     },
@@ -847,22 +1148,6 @@
         "coordinates": [
           110.8144577,
           -7.5524343
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "node/4114619997",
-      "properties": {
-        "@id": "node/4114619997",
-        "amenity": "clinic",
-        "name": "Posyandu"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8218586,
-          -7.559709
         ]
       }
     },
@@ -916,88 +1201,6 @@
     },
     {
       "type": "Feature",
-      "id": "node/4123315124",
-      "properties": {
-        "@id": "node/4123315124",
-        "amenity": "pharmacy",
-        "name": "Toko Obat Ikan Mas"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8320584,
-          -7.5698907
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "node/4123315128",
-      "properties": {
-        "@id": "node/4123315128",
-        "amenity": "pharmacy",
-        "name": "Toko Shinse Ketandan"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8327375,
-          -7.5699952
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "node/4123315129",
-      "properties": {
-        "@id": "node/4123315129",
-        "amenity": "pharmacy",
-        "name": "Toko Shinse Sari Alam"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8327014,
-          -7.5699904
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "node/4134668843",
-      "properties": {
-        "@id": "node/4134668843",
-        "addr:housenumber": "47",
-        "addr:street": "Jalan S. Parman",
-        "amenity": "clinic",
-        "name": "Nakamura Holistic Therapy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.823772,
-          -7.5629831
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "node/4134668846",
-      "properties": {
-        "@id": "node/4134668846",
-        "amenity": "clinic",
-        "name": "Rumah Terapi Air Teknologi Jepang"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8231962,
-          -7.5628472
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "node/4140291291",
       "properties": {
         "@id": "node/4140291291",
@@ -1010,71 +1213,6 @@
         "coordinates": [
           110.8283714,
           -7.5647706
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "node/4140291294",
-      "properties": {
-        "@id": "node/4140291294",
-        "amenity": "doctors",
-        "healthcare": "doctor",
-        "name": "Rumah Praktek Dr. J. Ridwan T Sugiarto Sp. Anak"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8277046,
-          -7.5646081
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "node/4140291300",
-      "properties": {
-        "@id": "node/4140291300",
-        "amenity": "pharmacy",
-        "name": "Toko Obat Tambak Segaran"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8272725,
-          -7.5644314
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "node/4202317688",
-      "properties": {
-        "@id": "node/4202317688",
-        "amenity": "doctors",
-        "name": "Dr. H. Sutrisno"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8336088,
-          -7.5700978
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "node/4202318004",
-      "properties": {
-        "@id": "node/4202318004",
-        "amenity": "pharmacy",
-        "name": "Toko Obat Herbal Kretek Gantung"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8332405,
-          -7.5708633
         ]
       }
     },
@@ -1098,35 +1236,52 @@
     },
     {
       "type": "Feature",
-      "id": "node/5683659121",
+      "id": "node/5553720162",
       "properties": {
-        "@id": "node/5683659121",
-        "addr:street": "Jalan Yosodipuro",
-        "amenity": "clinic",
-        "name": "Naava Green Skincare"
+        "@id": "node/5553720162",
+        "amenity": "pharmacy"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          110.813954,
-          -7.5631303
+          110.7776651,
+          -7.5654198
         ]
       }
     },
     {
       "type": "Feature",
-      "id": "node/6130196537",
+      "id": "node/5677879421",
       "properties": {
-        "@id": "node/6130196537",
-        "amenity": "clinic",
-        "name": "Posyandu Ngemplak Sutan RW 37",
-        "operator": "Bu Dastri"
+        "@id": "node/5677879421",
+        "addr:postcode": "57554",
+        "addr:street": "Indragiri",
+        "amenity": "pharmacy",
+        "name": "Apotek Haidar",
+        "opening_hours": "Mo-Su 07:00-21:00"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          110.8573709,
-          -7.5448411
+          110.8627669,
+          -7.5909257
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7465390972",
+      "properties": {
+        "@id": "node/7465390972",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "KartasuraKartas, NgadirejoNgadireGempol,"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7551187,
+          -7.5627099
         ]
       }
     },
@@ -1160,6 +1315,95 @@
         "coordinates": [
           110.8166391,
           -7.5649652
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9752244136",
+      "properties": {
+        "@id": "node/9752244136",
+        "amenity": "pharmacy",
+        "name": "Apotek Tanjung Anom"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8164882,
+          -7.5918719
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9780828965",
+      "properties": {
+        "@id": "node/9780828965",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "PUSKESMAS Colomadu",
+        "operator": "Ministry of Health",
+        "operator:en": "Ministry of Health",
+        "operator:id": "Kementerian Kesehatan",
+        "operator:type": "government",
+        "operator:wikidata": "Q12490745"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7524176,
+          -7.5333988
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9780828966",
+      "properties": {
+        "@id": "node/9780828966",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Mommies Clinic Colomadu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7531166,
+          -7.5338602
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9780828972",
+      "properties": {
+        "@id": "node/9780828972",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Klinik Jasmine"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7535837,
+          -7.5339532
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9780831644",
+      "properties": {
+        "@id": "node/9780831644",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "PUSKESMAS 02 Colomadu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.7900344,
+          -7.5338312
         ]
       }
     },
@@ -1233,6 +1477,23 @@
         "coordinates": [
           110.7875502,
           -7.567984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9783077633",
+      "properties": {
+        "@id": "node/9783077633",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Rumah Sakit Fatmawati Soekarno Putri"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8128181,
+          -7.5261288
         ]
       }
     },
@@ -1414,23 +1675,6 @@
     },
     {
       "type": "Feature",
-      "id": "node/9789389237",
-      "properties": {
-        "@id": "node/9789389237",
-        "amenity": "doctors",
-        "healthcare": "doctor",
-        "name": "dr. Maria Rini Indarti, M.Kes, SpKJ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8143655,
-          -7.5556716
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "node/9789389243",
       "properties": {
         "@id": "node/9789389243",
@@ -1500,24 +1744,6 @@
     },
     {
       "type": "Feature",
-      "id": "node/9823965410",
-      "properties": {
-        "@id": "node/9823965410",
-        "amenity": "clinic",
-        "beauty": "skin_care",
-        "healthcare": "clinic",
-        "name": "Dr Norma Aesthetic Clinic"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8377414,
-          -7.5621015
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "node/9825141254",
       "properties": {
         "@id": "node/9825141254",
@@ -1532,25 +1758,6 @@
         "coordinates": [
           110.8021446,
           -7.5708467
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "node/9825341732",
-      "properties": {
-        "@id": "node/9825341732",
-        "amenity": "clinic",
-        "beauty": "skin_care",
-        "healthcare": "clinic",
-        "healthcare:speciality": "dermatology",
-        "name": "Natasha Skin Clinic Center Laweyan"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8013664,
-          -7.5707936
         ]
       }
     },
@@ -1655,61 +1862,6 @@
         "coordinates": [
           110.8451674,
           -7.5561394
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "node/9837977477",
-      "properties": {
-        "@id": "node/9837977477",
-        "amenity": "clinic",
-        "beauty": "skin_care",
-        "healthcare": "clinic",
-        "healthcare:speciality": "dermatology",
-        "name": "Be Hati Skin Care & Esthetic Clinic"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8099147,
-          -7.5659726
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "node/12805140349",
-      "properties": {
-        "@id": "node/12805140349",
-        "bus": "yes",
-        "highway": "bus_stop",
-        "name": "Puskesmas Krembyongan",
-        "public_transport": "platform"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8129114,
-          -7.5326993
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "node/12805140350",
-      "properties": {
-        "@id": "node/12805140350",
-        "bus": "yes",
-        "highway": "bus_stop",
-        "name": "Puskesmas Krembyongan",
-        "public_transport": "platform"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8129765,
-          -7.5326988
         ]
       }
     }

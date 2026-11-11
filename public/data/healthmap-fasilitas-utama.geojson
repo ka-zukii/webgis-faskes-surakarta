@@ -1,103 +1,11 @@
 {
   "type": "FeatureCollection",
   "name": "HealthMap Solo - empat kategori fasilitas kesehatan",
-  "generator": "HealthMap Solo - klasifikasi awal data OpenStreetMap",
+  "generator": "HealthMap Solo - klasifikasi ulang nama dan tag OSM (tools/klasifikasi_osm.py)",
   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
-  "source_timestamp": "2026-11-06T13:58:24Z",
+  "source_timestamp": "2026-11-11T03:36:36Z",
   "attribution": "© OpenStreetMap contributors",
   "features": [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8265216,
-          -7.5619328
-        ]
-      },
-      "properties": {
-        "@id": "relation/8209601",
-        "amenity": "clinic",
-        "building": "yes",
-        "healthcare": "clinic",
-        "name": "Puskesmas Setabelan",
-        "operator": "Ministry of Health",
-        "operator:en": "Ministry of Health",
-        "operator:id": "Kementerian Kesehatan",
-        "operator:type": "government",
-        "operator:wikidata": "Q12490745",
-        "type": "multipolygon",
-        "@geometry": "center",
-        "kategori_healthmap": "puskesmas",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Nama fasilitas menyebut Puskesmas; klasifikasi nama mengoreksi tag OSM yang mungkin keliru.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.790728,
-          -7.5600382
-        ]
-      },
-      "properties": {
-        "@id": "way/225531507",
-        "addr:city": "Surakarta",
-        "addr:housename": "Panti Waluyo",
-        "addr:street": "Jalan Jend. Ahmad Yani",
-        "amenity": "hospital",
-        "name": "R.S Panti Waluyo",
-        "@geometry": "center",
-        "kategori_healthmap": "rumah_sakit",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Tag OSM menunjukkan hospital dan nama tidak mengindikasikan kategori lain.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8256402,
-          -7.5832749
-        ]
-      },
-      "properties": {
-        "@id": "way/374651615",
-        "amenity": "hospital",
-        "name": "Puskesmas Gajahan",
-        "@geometry": "center",
-        "kategori_healthmap": "puskesmas",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Nama fasilitas menyebut Puskesmas; klasifikasi nama mengoreksi tag OSM yang mungkin keliru.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8312607,
-          -7.5806945
-        ]
-      },
-      "properties": {
-        "@id": "way/374656510",
-        "amenity": "hospital",
-        "emergency": "yes",
-        "name": "RSI Kustati",
-        "@geometry": "center",
-        "kategori_healthmap": "rumah_sakit",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Tag OSM menunjukkan hospital dan nama tidak mengindikasikan kategori lain.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
     {
       "type": "Feature",
       "geometry": {
@@ -109,35 +17,14 @@
       },
       "properties": {
         "@id": "way/401715349",
-        "amenity": "pharmacy",
-        "building": "pharmacy",
-        "healthcare": "pharmacy",
         "name": "Apotek Kondang Sehat",
-        "@geometry": "center",
         "kategori_healthmap": "apotek",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan pharmacy; verifikasi nama, operasional, dan status apotek.",
-        "status_verifikasi": "perlu_verifikasi"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.837188,
-          -7.5754784
-        ]
-      },
-      "properties": {
-        "@id": "way/410986092",
-        "building": "yes",
-        "name": "UPTD Puskesmas",
-        "@geometry": "center",
-        "kategori_healthmap": "puskesmas",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Nama UPTD Puskesmas; nama unit spesifik belum tercantum.",
-        "status_verifikasi": "perlu_verifikasi"
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama dan tag OSM sama-sama menunjukkan apotek.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Ketelan",
+        "alamat": ""
       }
     },
     {
@@ -151,59 +38,14 @@
       },
       "properties": {
         "@id": "way/536074295",
-        "amenity": "clinic",
-        "building": "yes",
-        "healthcare": "clinic",
         "name": "Klinik Utama Sri Murti Husada",
-        "@geometry": "center",
         "kategori_healthmap": "klinik",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan clinic; verifikasi jenis layanan dan status fasilitas.",
-        "status_verifikasi": "perlu_verifikasi"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.7876261,
-          -7.5547652
-        ]
-      },
-      "properties": {
-        "@id": "way/536334580",
-        "amenity": "hospital",
-        "building": "yes",
-        "healthcare": "hospital",
-        "name": "RS Paru Jajar Surakarta",
-        "@geometry": "center",
-        "kategori_healthmap": "rumah_sakit",
         "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Tag OSM menunjukkan hospital dan nama tidak mengindikasikan kategori lain.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.7796929,
-          -7.547432
-        ]
-      },
-      "properties": {
-        "@id": "way/536351972",
-        "amenity": "hospital",
-        "building": "yes",
-        "healthcare": "hospital",
-        "name": "RS Mata Solo",
-        "@geometry": "center",
-        "kategori_healthmap": "rumah_sakit",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Tag OSM menunjukkan hospital dan nama tidak mengindikasikan kategori lain.",
-        "status_verifikasi": "klasifikasi_awal"
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama menyebut klinik; verifikasi jenis layanan dan status fasilitas.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Jajar",
+        "alamat": ""
       }
     },
     {
@@ -217,64 +59,14 @@
       },
       "properties": {
         "@id": "way/536387770",
-        "amenity": "pharmacy",
-        "building": "yes",
-        "dispensing": "yes",
-        "healthcare": "pharmacy",
         "name": "Apotek Sebelas Maret",
-        "operator": "UNS",
-        "@geometry": "center",
         "kategori_healthmap": "apotek",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan pharmacy; verifikasi nama, operasional, dan status apotek.",
-        "status_verifikasi": "perlu_verifikasi"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.7900827,
-          -7.5496793
-        ]
-      },
-      "properties": {
-        "@id": "way/536583644",
-        "addr:full": "Jalan Adi Sucipto No.118, Jajar, Kec. Laweyan, Kota Surakarta, Jawa Tengah 57144",
-        "amenity": "hospital",
-        "building": "hospital",
-        "healthcare": "hospital",
-        "layer": "1",
-        "name": "Solo international Hospital",
-        "phone": "+62 271 7469100",
-        "website": "https://rs-jih.co.id/",
-        "@geometry": "center",
-        "kategori_healthmap": "rumah_sakit",
         "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Tag OSM menunjukkan hospital dan nama tidak mengindikasikan kategori lain.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8534794,
-          -7.5720538
-        ]
-      },
-      "properties": {
-        "@id": "way/537047553",
-        "amenity": "clinic",
-        "building": "yes",
-        "name": "UPTD Puskesmas Pucangsawit",
-        "@geometry": "center",
-        "kategori_healthmap": "puskesmas",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Nama fasilitas menyebut Puskesmas; klasifikasi nama mengoreksi tag OSM yang mungkin keliru.",
-        "status_verifikasi": "klasifikasi_awal"
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama dan tag OSM sama-sama menunjukkan apotek.",
+        "kecamatan": "Jebres",
+        "kelurahan": "Jebres",
+        "alamat": ""
       }
     },
     {
@@ -288,14 +80,14 @@
       },
       "properties": {
         "@id": "way/579818064",
-        "amenity": "clinic",
-        "building": "yes",
         "name": "Klinik Barokah Pajang Laweyan",
-        "@geometry": "center",
         "kategori_healthmap": "klinik",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan clinic; verifikasi jenis layanan dan status fasilitas.",
-        "status_verifikasi": "perlu_verifikasi"
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama menyebut klinik; verifikasi jenis layanan dan status fasilitas.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Pajang",
+        "alamat": ""
       }
     },
     {
@@ -309,105 +101,14 @@
       },
       "properties": {
         "@id": "way/579872102",
-        "amenity": "clinic",
-        "building": "yes",
-        "healthcare": "clinic",
         "name": "Klinik Anak Cerdas Ceria",
-        "@geometry": "center",
         "kategori_healthmap": "klinik",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan clinic; verifikasi jenis layanan dan status fasilitas.",
-        "status_verifikasi": "perlu_verifikasi"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8402198,
-          -7.5602586
-        ]
-      },
-      "properties": {
-        "@id": "way/580005945",
-        "addr:full": "Jalan Kolonel Sutarto No.16, Jebres",
-        "amenity": "hospital",
-        "building": "hospital",
-        "name": "Rumah Sakit Hermina Surakarta",
-        "name:en": "RS. Hermina Surakarta",
-        "operator:type": "private",
-        "website": "https://herminahospitals.com/",
-        "@geometry": "center",
-        "kategori_healthmap": "rumah_sakit",
         "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Tag OSM menunjukkan hospital dan nama tidak mengindikasikan kategori lain.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8247779,
-          -7.5573611
-        ]
-      },
-      "properties": {
-        "@id": "way/580009252",
-        "amenity": "hospital",
-        "building": "yes",
-        "name": "RS Triharsi Surakarta",
-        "@geometry": "center",
-        "kategori_healthmap": "rumah_sakit",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Tag OSM menunjukkan hospital dan nama tidak mengindikasikan kategori lain.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.806798,
-          -7.5649983
-        ]
-      },
-      "properties": {
-        "@id": "way/580012527",
-        "amenity": "hospital",
-        "building": "yes",
-        "healthcare": "hospital",
-        "name": "RS Gigi dan Mulut UMS",
-        "@geometry": "center",
-        "kategori_healthmap": "rumah_sakit",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Tag OSM menunjukkan hospital dan nama tidak mengindikasikan kategori lain.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8065547,
-          -7.5650961
-        ]
-      },
-      "properties": {
-        "@id": "way/580012539",
-        "amenity": "clinic",
-        "building": "yes",
-        "healthcare": "clinic",
-        "name": "Klinik Fisioterapi YPAC Surakarta",
-        "@geometry": "center",
-        "kategori_healthmap": "klinik",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Klinik fisioterapi dimasukkan sebagai klinik; verifikasi status fasilitas dan layanannya.",
-        "status_verifikasi": "perlu_verifikasi"
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama menyebut klinik; verifikasi jenis layanan dan status fasilitas.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Banyuanyar",
+        "alamat": ""
       }
     },
     {
@@ -421,169 +122,14 @@
       },
       "properties": {
         "@id": "way/580016746",
-        "amenity": "hospital",
-        "building": "hospital",
-        "healthcare": "hospital",
         "name": "Klinik Mojosongo",
-        "@geometry": "center",
         "kategori_healthmap": "klinik",
         "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Nama menyebut klinik meskipun tag amenity OSM adalah hospital; perlu verifikasi jenis izin.",
-        "status_verifikasi": "perlu_verifikasi"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8459049,
-          -7.5359963
-        ]
-      },
-      "properties": {
-        "@id": "way/636234558",
-        "amenity": "hospital",
-        "building": "hospital",
-        "healthcare": "hospital",
-        "name": "Puskesmas Sibela",
-        "@geometry": "center",
-        "kategori_healthmap": "puskesmas",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Nama fasilitas menyebut Puskesmas; klasifikasi nama mengoreksi tag OSM yang mungkin keliru.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8623982,
-          -7.5525392
-        ]
-      },
-      "properties": {
-        "@id": "way/670874994",
-        "amenity": "clinic",
-        "building": "yes",
-        "name": "Puskesmas Ngoresan",
-        "@geometry": "center",
-        "kategori_healthmap": "puskesmas",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Nama fasilitas menyebut Puskesmas; klasifikasi nama mengoreksi tag OSM yang mungkin keliru.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8017574,
-          -7.5630553
-        ]
-      },
-      "properties": {
-        "@id": "way/782898009",
-        "addr:city": "Surakarta",
-        "addr:full": "Jalan Slamet Riyadi No.404, Purwosari, Kec. Laweyan, Kota Surakarta, Jawa Tengah 57142",
-        "amenity": "hospital",
-        "emergency": "yes",
-        "name": "RS Kasih Ibu",
-        "operator:type": "private",
-        "website": "https://rskasihibu.com/",
-        "@geometry": "center",
-        "kategori_healthmap": "rumah_sakit",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Tag OSM menunjukkan hospital dan nama tidak mengindikasikan kategori lain.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8380389,
-          -7.5554899
-        ]
-      },
-      "properties": {
-        "@id": "way/782972077",
-        "addr:city": "Surakarta",
-        "addr:full": "Jalan Brigjend Katamso Nomor 55",
-        "amenity": "hospital",
-        "emergency": "yes",
-        "healthcare": "hospital",
-        "name": "RS Dokter Oen Kandang Sapi",
-        "operator:type": "private",
-        "website": "https://www.droenska.com/",
-        "@geometry": "center",
-        "kategori_healthmap": "rumah_sakit",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Tag OSM menunjukkan hospital dan nama tidak mengindikasikan kategori lain.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8422004,
-          -7.5581042
-        ]
-      },
-      "properties": {
-        "@id": "way/783804599",
-        "addr:city": "Surakarta",
-        "addr:full": "Jalan Kolonel Sutarto No.132, Jebres",
-        "addr:housenumber": "132",
-        "addr:street": "Jalan Kolonel Sutarto",
-        "amenity": "hospital",
-        "emergency": "yes",
-        "name": "RSUD Dr. Moewardi Surakarta",
-        "name:etymology:wikidata": "Q7393215",
-        "name:etymology:wikipedia": "id:Moewardi",
-        "operator:type": "government",
-        "website": "https://rsmoewardi.com/",
-        "@geometry": "center",
-        "kategori_healthmap": "rumah_sakit",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Tag OSM menunjukkan hospital dan nama tidak mengindikasikan kategori lain.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8053805,
-          -7.5659519
-        ]
-      },
-      "properties": {
-        "@id": "way/783881116",
-        "addr:city": "Surakarta",
-        "addr:full": "Jalan Brigjen Slamet Riyadi No. 321 Laweyan",
-        "addr:postcode": "57148",
-        "amenity": "hospital",
-        "contact:email": "rstslametriyadisolo@yahoo.co.id",
-        "contact:fax": "+62 271 726700",
-        "contact:phone": "+62 271 714656",
-        "contact:website": "https://rstslametriyadi.co.id",
-        "healthcare": "hospital",
-        "name": "RST Slamet Riyadi (DKT)",
-        "name:etymology:wikidata": "Q4188833",
-        "name:etymology:wikipedia": "id:Slamet Rijadi",
-        "opening_hours": "24/7",
-        "@geometry": "center",
-        "kategori_healthmap": "rumah_sakit",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Tag OSM menunjukkan hospital dan nama tidak mengindikasikan kategori lain.",
-        "status_verifikasi": "klasifikasi_awal"
+        "status_verifikasi": "perlu_verifikasi",
+        "catatan_pembersihan": "Nama menyebut klinik; verifikasi jenis layanan dan status fasilitas.",
+        "kecamatan": "Jebres",
+        "kelurahan": "Mojosongo",
+        "alamat": ""
       }
     },
     {
@@ -597,14 +143,14 @@
       },
       "properties": {
         "@id": "way/794227812",
-        "amenity": "pharmacy",
-        "building": "pharmacy",
         "name": "Apotek Kimia Farma",
-        "@geometry": "center",
         "kategori_healthmap": "apotek",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan pharmacy; verifikasi nama, operasional, dan status apotek.",
-        "status_verifikasi": "perlu_verifikasi"
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama dan tag OSM sama-sama menunjukkan apotek.",
+        "kecamatan": "Jebres",
+        "kelurahan": "Jebres",
+        "alamat": ""
       }
     },
     {
@@ -618,139 +164,14 @@
       },
       "properties": {
         "@id": "way/794661381",
-        "addr:full": "jl. Slamet Riyadi No.432, Purwosari, Laweyan, Surakarta, Jawa Tengah",
-        "amenity": "pharmacy",
-        "building": "yes",
         "name": "Apotek 24 Purwosari",
-        "@geometry": "center",
         "kategori_healthmap": "apotek",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan pharmacy; verifikasi nama, operasional, dan status apotek.",
-        "status_verifikasi": "perlu_verifikasi"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8356192,
-          -7.5357839
-        ]
-      },
-      "properties": {
-        "@id": "way/1207661815",
-        "amenity": "clinic",
-        "building": "yes",
-        "healthcare": "clinic",
-        "name": "Laboratorium Klinik Redy",
-        "@geometry": "center",
-        "kategori_healthmap": "klinik",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan clinic; verifikasi jenis layanan dan status fasilitas.",
-        "status_verifikasi": "perlu_verifikasi"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8019931,
-          -7.5543896
-        ]
-      },
-      "properties": {
-        "@id": "way/1220661041",
-        "amenity": "hospital",
-        "name": "Rumah Sakit Bhayangkara",
-        "@geometry": "center",
-        "kategori_healthmap": "rumah_sakit",
         "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Tag OSM menunjukkan hospital dan nama tidak mengindikasikan kategori lain.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8634745,
-          -7.5570271
-        ]
-      },
-      "properties": {
-        "@id": "way/1388134222",
-        "amenity": "hospital",
-        "healthcare": "hospital",
-        "healthcare:speciality": "physiatry",
-        "name": "RSJD SURAKARTA",
-        "@geometry": "center",
-        "kategori_healthmap": "rumah_sakit",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Tag OSM menunjukkan hospital dan nama tidak mengindikasikan kategori lain.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8523641,
-          -7.5531242
-        ]
-      },
-      "properties": {
-        "@id": "way/1472873980",
-        "alt_name": "Rumah Sakit Kardiologi Emirates Indonesia",
-        "amenity": "hospital",
-        "name": "Rumah Sakit Jantung Emirates Indonesia",
-        "name:en": "Emirates Indonesia Cardiology Hospital",
-        "@geometry": "center",
-        "kategori_healthmap": "rumah_sakit",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Tag OSM menunjukkan hospital dan nama tidak mengindikasikan kategori lain.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8146808,
-          -7.5517478
-        ]
-      },
-      "properties": {
-        "@id": "node/4052331290",
-        "amenity": "hospital",
-        "name": "Rumah Sakit Brayat Minulya",
-        "kategori_healthmap": "rumah_sakit",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Nama Rumah Sakit Brayat Minulya dan tag amenity=hospital mendukung klasifikasi. Titik bernama sama yang berdekatan digabung sementara.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.822507,
-          -7.5599709
-        ]
-      },
-      "properties": {
-        "@id": "node/4114619998",
-        "amenity": "clinic",
-        "name": "Puskesmas",
-        "kategori_healthmap": "puskesmas",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Nama fasilitas menyebut Puskesmas; klasifikasi nama mengoreksi tag OSM yang mungkin keliru.",
-        "status_verifikasi": "klasifikasi_awal"
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama dan tag OSM sama-sama menunjukkan apotek.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Purwosari",
+        "alamat": "jl. Slamet Riyadi No.432, Purwosari, Laweyan, Surakarta, Jawa Tengah"
       }
     },
     {
@@ -764,12 +185,14 @@
       },
       "properties": {
         "@id": "node/4123315092",
-        "amenity": "pharmacy",
         "name": "Apotek Sari Asih",
         "kategori_healthmap": "apotek",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan pharmacy; verifikasi nama, operasional, dan status apotek.",
-        "status_verifikasi": "perlu_verifikasi"
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama dan tag OSM sama-sama menunjukkan apotek.",
+        "kecamatan": "Jebres",
+        "kelurahan": "Sudiroprajan",
+        "alamat": ""
       }
     },
     {
@@ -783,12 +206,14 @@
       },
       "properties": {
         "@id": "node/4123315104",
-        "amenity": "clinic",
         "name": "Klinik Tusuk Jarum",
         "kategori_healthmap": "klinik",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan clinic; verifikasi jenis layanan dan status fasilitas.",
-        "status_verifikasi": "perlu_verifikasi"
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama menyebut klinik; verifikasi jenis layanan dan status fasilitas.",
+        "kecamatan": "Jebres",
+        "kelurahan": "Sudiroprajan",
+        "alamat": ""
       }
     },
     {
@@ -802,13 +227,14 @@
       },
       "properties": {
         "@id": "node/4140291291",
-        "amenity": "pharmacy",
-        "healthcare": "pharmacy",
         "name": "Apotek Widuran",
         "kategori_healthmap": "apotek",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan pharmacy; verifikasi nama, operasional, dan status apotek.",
-        "status_verifikasi": "perlu_verifikasi"
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama dan tag OSM sama-sama menunjukkan apotek.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Setabelan",
+        "alamat": ""
       }
     },
     {
@@ -822,52 +248,14 @@
       },
       "properties": {
         "@id": "node/8146567029",
-        "amenity": "pharmacy",
         "name": "Apotek Setia Budi",
         "kategori_healthmap": "apotek",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan pharmacy; verifikasi nama, operasional, dan status apotek.",
-        "status_verifikasi": "perlu_verifikasi"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8166391,
-          -7.5649652
-        ]
-      },
-      "properties": {
-        "@id": "node/8922068306",
-        "amenity": "hospital",
-        "healthcare": "hospital",
-        "name": "RS PKU Muhammadiyah Surakarta",
-        "kategori_healthmap": "rumah_sakit",
         "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Tag OSM menunjukkan hospital dan nama tidak mengindikasikan kategori lain.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8085547,
-          -7.5374419
-        ]
-      },
-      "properties": {
-        "@id": "node/9780831658",
-        "amenity": "clinic",
-        "healthcare": "clinic",
-        "name": "Puskesmas Banyuanyar",
-        "kategori_healthmap": "puskesmas",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Nama fasilitas menyebut Puskesmas; klasifikasi nama mengoreksi tag OSM yang mungkin keliru.",
-        "status_verifikasi": "klasifikasi_awal"
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama dan tag OSM sama-sama menunjukkan apotek.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Gilingan",
+        "alamat": ""
       }
     },
     {
@@ -881,13 +269,14 @@
       },
       "properties": {
         "@id": "node/9781225896",
-        "amenity": "clinic",
-        "healthcare": "clinic",
         "name": "Puskesmas Pembantu Karangasem",
         "kategori_healthmap": "puskesmas",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Nama fasilitas menyebut Puskesmas; klasifikasi nama mengoreksi tag OSM yang mungkin keliru.",
-        "status_verifikasi": "klasifikasi_awal"
+        "keyakinan_klasifikasi": "sedang",
+        "status_verifikasi": "perlu_verifikasi",
+        "catatan_pembersihan": "Puskesmas Pembantu (pustu); masuk kategori puskesmas, pertimbangkan kategori terpisah.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Karangasem",
+        "alamat": ""
       }
     },
     {
@@ -901,13 +290,14 @@
       },
       "properties": {
         "@id": "node/9781404981",
-        "amenity": "clinic",
-        "healthcare": "clinic",
         "name": "Klinik Utama Kasih Ibu Sehati",
         "kategori_healthmap": "klinik",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan clinic; verifikasi jenis layanan dan status fasilitas.",
-        "status_verifikasi": "perlu_verifikasi"
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama menyebut klinik; verifikasi jenis layanan dan status fasilitas.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Pajang",
+        "alamat": ""
       }
     },
     {
@@ -921,18 +311,14 @@
       },
       "properties": {
         "@id": "node/9781405012",
-        "amenity": "clinic",
-        "healthcare": "clinic",
         "name": "PUSKESMAS Pembantu Wangkung",
-        "operator": "Ministry of Health",
-        "operator:en": "Ministry of Health",
-        "operator:id": "Kementerian Kesehatan",
-        "operator:type": "government",
-        "operator:wikidata": "Q12490745",
         "kategori_healthmap": "puskesmas",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Nama fasilitas menyebut Puskesmas; klasifikasi nama mengoreksi tag OSM yang mungkin keliru.",
-        "status_verifikasi": "klasifikasi_awal"
+        "keyakinan_klasifikasi": "sedang",
+        "status_verifikasi": "perlu_verifikasi",
+        "catatan_pembersihan": "Puskesmas Pembantu (pustu); masuk kategori puskesmas, pertimbangkan kategori terpisah.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Pajang",
+        "alamat": ""
       }
     },
     {
@@ -946,18 +332,14 @@
       },
       "properties": {
         "@id": "node/9783077638",
-        "amenity": "clinic",
-        "healthcare": "clinic",
         "name": "PUSKESMAS Pembantu Krembyongan",
-        "operator": "Ministry of Health",
-        "operator:en": "Ministry of Health",
-        "operator:id": "Kementerian Kesehatan",
-        "operator:type": "government",
-        "operator:wikidata": "Q12490745",
         "kategori_healthmap": "puskesmas",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Nama fasilitas menyebut Puskesmas; klasifikasi nama mengoreksi tag OSM yang mungkin keliru. Dipertahankan sebagai representasi Puskesmas Pembantu Krembyongan; titik lain yang berdekatan dikeluarkan sementara.",
-        "status_verifikasi": "klasifikasi_awal"
+        "keyakinan_klasifikasi": "sedang",
+        "status_verifikasi": "perlu_verifikasi",
+        "catatan_pembersihan": "Puskesmas Pembantu (pustu); masuk kategori puskesmas, pertimbangkan kategori terpisah.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Banjarsari",
+        "alamat": ""
       }
     },
     {
@@ -971,33 +353,14 @@
       },
       "properties": {
         "@id": "node/9783077676",
-        "amenity": "clinic",
-        "healthcare": "clinic",
         "name": "PUSKESMAS Pembantu Minapadi",
         "kategori_healthmap": "puskesmas",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Nama fasilitas menyebut Puskesmas; klasifikasi nama mengoreksi tag OSM yang mungkin keliru.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.819665,
-          -7.5419839
-        ]
-      },
-      "properties": {
-        "@id": "node/9783077687",
-        "amenity": "clinic",
-        "healthcare": "clinic",
-        "name": "UPT PUSKESMAS Nusukan",
-        "kategori_healthmap": "puskesmas",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Nama fasilitas menyebut Puskesmas; klasifikasi nama mengoreksi tag OSM yang mungkin keliru.",
-        "status_verifikasi": "klasifikasi_awal"
+        "keyakinan_klasifikasi": "sedang",
+        "status_verifikasi": "perlu_verifikasi",
+        "catatan_pembersihan": "Puskesmas Pembantu (pustu); masuk kategori puskesmas, pertimbangkan kategori terpisah.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Nusukan",
+        "alamat": ""
       }
     },
     {
@@ -1011,13 +374,14 @@
       },
       "properties": {
         "@id": "node/9783077693",
-        "amenity": "clinic",
-        "healthcare": "clinic",
         "name": "Klinik Sriwijaya",
         "kategori_healthmap": "klinik",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan clinic; verifikasi jenis layanan dan status fasilitas.",
-        "status_verifikasi": "perlu_verifikasi"
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama menyebut klinik; verifikasi jenis layanan dan status fasilitas.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Nusukan",
+        "alamat": ""
       }
     },
     {
@@ -1031,33 +395,14 @@
       },
       "properties": {
         "@id": "node/9783253674",
-        "amenity": "clinic",
-        "healthcare": "clinic",
         "name": "PUSKESMAS Pembantu Cengklik",
         "kategori_healthmap": "puskesmas",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Nama fasilitas menyebut Puskesmas; klasifikasi nama mengoreksi tag OSM yang mungkin keliru.",
-        "status_verifikasi": "klasifikasi_awal"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.8347087,
-          -7.5559781
-        ]
-      },
-      "properties": {
-        "@id": "node/9784408212",
-        "amenity": "clinic",
-        "healthcare": "clinic",
-        "name": "PUSKESMAS Gilingan",
-        "kategori_healthmap": "puskesmas",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Nama fasilitas menyebut Puskesmas; klasifikasi nama mengoreksi tag OSM yang mungkin keliru.",
-        "status_verifikasi": "klasifikasi_awal"
+        "keyakinan_klasifikasi": "sedang",
+        "status_verifikasi": "perlu_verifikasi",
+        "catatan_pembersihan": "Puskesmas Pembantu (pustu); masuk kategori puskesmas, pertimbangkan kategori terpisah.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Nusukan",
+        "alamat": ""
       }
     },
     {
@@ -1071,13 +416,14 @@
       },
       "properties": {
         "@id": "node/9784408221",
-        "amenity": "clinic",
-        "healthcare": "clinic",
         "name": "PUSKESMAS Pembantu Kandang Sapi",
         "kategori_healthmap": "puskesmas",
-        "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Nama fasilitas menyebut Puskesmas; klasifikasi nama mengoreksi tag OSM yang mungkin keliru.",
-        "status_verifikasi": "klasifikasi_awal"
+        "keyakinan_klasifikasi": "sedang",
+        "status_verifikasi": "perlu_verifikasi",
+        "catatan_pembersihan": "Puskesmas Pembantu (pustu); masuk kategori puskesmas, pertimbangkan kategori terpisah.",
+        "kecamatan": "Jebres",
+        "kelurahan": "Jebres",
+        "alamat": ""
       }
     },
     {
@@ -1091,33 +437,14 @@
       },
       "properties": {
         "@id": "node/9784586732",
-        "amenity": "clinic",
-        "healthcare": "clinic",
         "name": "Klinik Pratama Aisyiyah",
         "kategori_healthmap": "klinik",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan clinic; verifikasi jenis layanan dan status fasilitas.",
-        "status_verifikasi": "perlu_verifikasi"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.836432,
-          -7.5816944
-        ]
-      },
-      "properties": {
-        "@id": "node/9787199287",
-        "amenity": "hospital",
-        "healthcare": "hospital",
-        "name": "Rumah Sakit PKU Muhammadiyah",
-        "kategori_healthmap": "rumah_sakit",
         "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Tag OSM menunjukkan hospital dan nama tidak mengindikasikan kategori lain.",
-        "status_verifikasi": "klasifikasi_awal"
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama menyebut klinik; verifikasi jenis layanan dan status fasilitas.",
+        "kecamatan": "Jebres",
+        "kelurahan": "Jebres",
+        "alamat": ""
       }
     },
     {
@@ -1131,14 +458,14 @@
       },
       "properties": {
         "@id": "node/9787216119",
-        "amenity": "pharmacy",
-        "dispensing": "yes",
-        "healthcare": "pharmacy",
         "name": "Apotek Ayo Sehat",
         "kategori_healthmap": "apotek",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan pharmacy; verifikasi nama, operasional, dan status apotek.",
-        "status_verifikasi": "perlu_verifikasi"
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama dan tag OSM sama-sama menunjukkan apotek.",
+        "kecamatan": "Pasar Kliwon",
+        "kelurahan": "Kedung Lumbu",
+        "alamat": ""
       }
     },
     {
@@ -1152,14 +479,14 @@
       },
       "properties": {
         "@id": "node/9789389243",
-        "amenity": "pharmacy",
-        "dispensing": "yes",
-        "healthcare": "pharmacy",
         "name": "Apotek Gunung Jati",
         "kategori_healthmap": "apotek",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan pharmacy; verifikasi nama, operasional, dan status apotek.",
-        "status_verifikasi": "perlu_verifikasi"
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama dan tag OSM sama-sama menunjukkan apotek.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Manahan",
+        "alamat": ""
       }
     },
     {
@@ -1173,13 +500,14 @@
       },
       "properties": {
         "@id": "node/9789389250",
-        "amenity": "clinic",
-        "healthcare": "clinic",
         "name": "Klinik Tanihara",
         "kategori_healthmap": "klinik",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan clinic; verifikasi jenis layanan dan status fasilitas.",
-        "status_verifikasi": "perlu_verifikasi"
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama menyebut klinik; verifikasi jenis layanan dan status fasilitas.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Manahan",
+        "alamat": ""
       }
     },
     {
@@ -1193,33 +521,14 @@
       },
       "properties": {
         "@id": "node/9789394532",
-        "amenity": "pharmacy",
-        "dispensing": "yes",
-        "healthcare": "pharmacy",
         "name": "VIVA Apotek",
         "kategori_healthmap": "apotek",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan pharmacy; verifikasi nama, operasional, dan status apotek.",
-        "status_verifikasi": "perlu_verifikasi"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.7999274,
-          -7.5571261
-        ]
-      },
-      "properties": {
-        "@id": "node/9822011343",
-        "amenity": "hospital",
-        "name": "Puskesmas Manahan",
-        "kategori_healthmap": "puskesmas",
         "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Nama fasilitas menyebut Puskesmas; klasifikasi nama mengoreksi tag OSM yang mungkin keliru.",
-        "status_verifikasi": "klasifikasi_awal"
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama dan tag OSM sama-sama menunjukkan apotek.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Karangasem",
+        "alamat": ""
       }
     },
     {
@@ -1233,15 +542,14 @@
       },
       "properties": {
         "@id": "node/9825141254",
-        "amenity": "pharmacy",
-        "brand": "Kimia Farma",
-        "brand:wikidata": "Q11264892",
-        "healthcare": "pharmacy",
         "name": "Kimia Farma",
         "kategori_healthmap": "apotek",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan pharmacy; verifikasi nama, operasional, dan status apotek.",
-        "status_verifikasi": "perlu_verifikasi"
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama dan tag OSM sama-sama menunjukkan apotek.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Bumi",
+        "alamat": ""
       }
     },
     {
@@ -1255,15 +563,14 @@
       },
       "properties": {
         "@id": "node/9828494254",
-        "amenity": "pharmacy",
-        "brand": "Kimia Farma",
-        "brand:wikidata": "Q11264892",
-        "healthcare": "pharmacy",
         "name": "Kimia Farma",
         "kategori_healthmap": "apotek",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan pharmacy; verifikasi nama, operasional, dan status apotek.",
-        "status_verifikasi": "perlu_verifikasi"
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama dan tag OSM sama-sama menunjukkan apotek.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Mangkubumen",
+        "alamat": ""
       }
     },
     {
@@ -1277,12 +584,14 @@
       },
       "properties": {
         "@id": "node/9830409215",
-        "amenity": "clinic",
         "name": "Klinik Mommies",
         "kategori_healthmap": "klinik",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan clinic; verifikasi jenis layanan dan status fasilitas.",
-        "status_verifikasi": "perlu_verifikasi"
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama menyebut klinik; verifikasi jenis layanan dan status fasilitas.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Ketelan",
+        "alamat": ""
       }
     },
     {
@@ -1296,15 +605,14 @@
       },
       "properties": {
         "@id": "node/9830435067",
-        "addr:housenumber": "64",
-        "addr:street": "Jl. Dr. Soepomo",
-        "amenity": "pharmacy",
         "name": "Apotek Jati Waluya",
-        "phone": "+62271714741",
         "kategori_healthmap": "apotek",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Tag OSM menunjukkan pharmacy; verifikasi nama, operasional, dan status apotek.",
-        "status_verifikasi": "perlu_verifikasi"
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Nama dan tag OSM sama-sama menunjukkan apotek.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Punggawan",
+        "alamat": "Jl. Dr. Soepomo 64"
       }
     },
     {
@@ -1312,18 +620,21 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          110.8277982,
-          -7.544758
+          110.7855,
+          -7.5687
         ]
       },
       "properties": {
-        "@id": "node/9833067830",
-        "amenity": "clinic",
-        "name": "Puskesmas Gambirsari",
+        "@id": "daftar-resmi/pajang",
+        "name": "Puskesmas Pajang",
         "kategori_healthmap": "puskesmas",
         "keyakinan_klasifikasi": "tinggi",
-        "catatan_pembersihan": "Nama fasilitas menyebut Puskesmas; klasifikasi nama mengoreksi tag OSM yang mungkin keliru.",
-        "status_verifikasi": "klasifikasi_awal"
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi puskesmas Kota Surakarta. Alamat: Jl. Sidoluhur No. 29, Kec. Laweyan. Telp: 0271-714594. Koordinat dari daftar; cek ulang di lapangan.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Pajang",
+        "alamat": "Jl. Sidoluhur No. 29, Kec. Laweyan",
+        "telepon": "0271-714594"
       }
     },
     {
@@ -1331,38 +642,813 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          110.8343666,
-          -7.5627694
+          110.8078,
+          -7.5691
         ]
       },
       "properties": {
-        "@id": "node/9837927182",
-        "amenity": "hospital",
-        "healthcare": "hospital",
-        "name": "Rumah Bersalin Bunda",
-        "kategori_healthmap": "klinik",
-        "keyakinan_klasifikasi": "sedang",
-        "catatan_pembersihan": "Rumah bersalin dikelompokkan sementara sebagai klinik/layanan persalinan; perlu verifikasi.",
-        "status_verifikasi": "perlu_verifikasi"
+        "@id": "daftar-resmi/penumping",
+        "name": "Puskesmas Penumping",
+        "kategori_healthmap": "puskesmas",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi puskesmas Kota Surakarta. Alamat: Jl. Ki Ageng Mangir Gg. II, Penumping, Kec. Laweyan. Telp: 0271-714832. Koordinat dari daftar; cek ulang di lapangan.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Penumping",
+        "alamat": "Jl. Ki Ageng Mangir Gg. II, Penumping, Kec. Laweyan",
+        "telepon": "0271-714832"
       }
     },
     {
       "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.801201,
+          -7.5642
+        ]
+      },
       "properties": {
-        "name": "RS Kadipiro (nama perlu dikonfirmasi)",
-        "amenity": "hospital",
-        "healthcare": "hospital",
+        "@id": "daftar-resmi/purwosari",
+        "name": "Puskesmas Purwosari",
+        "kategori_healthmap": "puskesmas",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi puskesmas Kota Surakarta. Alamat: Jl. Plamboyan Dalam No. 2, Kec. Laweyan. Telp: 0271-716333. Koordinat dari daftar; cek ulang di lapangan.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Purwosari",
+        "alamat": "Jl. Plamboyan Dalam No. 2, Kec. Laweyan",
+        "telepon": "0271-716333"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.816803,
+          -7.5798
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi/kratonan",
+        "name": "Puskesmas Kratonan",
+        "kategori_healthmap": "puskesmas",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi puskesmas Kota Surakarta. Alamat: Jl. Pringgondani No. 34, Kec. Serengan. Telp: 0271-655539. Koordinat dari daftar; cek ulang di lapangan.",
+        "kecamatan": "Serengan",
+        "kelurahan": "Kratonan",
+        "alamat": "Jl. Pringgondani No. 34, Kec. Serengan",
+        "telepon": "0271-655539"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.818604,
+          -7.576
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi/jayengan",
+        "name": "Puskesmas Jayengan",
+        "kategori_healthmap": "puskesmas",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi puskesmas Kota Surakarta. Alamat: Kartopuran RT 12/V, Kec. Serengan. Telp: 0271-641257. Koordinat dari daftar; cek ulang di lapangan.",
+        "kecamatan": "Serengan",
+        "kelurahan": "Jayengan",
+        "alamat": "Kartopuran RT 12/V, Kec. Serengan",
+        "telepon": "0271-641257"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.827698,
+          -7.5682
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi/gajahan",
+        "name": "Puskesmas Gajahan",
+        "kategori_healthmap": "puskesmas",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi puskesmas Kota Surakarta. Alamat: Jl. Veteran No. 46, Kec. Pasar Kliwon. Telp: 0271-654077. Koordinat dari daftar; cek ulang di lapangan.",
+        "kecamatan": "Pasar Kliwon",
+        "kelurahan": "Kampung Baru",
+        "alamat": "Jl. Veteran No. 46, Kec. Pasar Kliwon",
+        "telepon": "0271-654077"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.840401,
+          -7.5778
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi/sangkrah",
+        "name": "Puskesmas Sangkrah",
+        "kategori_healthmap": "puskesmas",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi puskesmas Kota Surakarta. Alamat: Jl. S Indragiri, Kec. Pasar Kliwon. Telp: 0271-655061. Koordinat dari daftar; cek ulang di lapangan.",
+        "kecamatan": "Pasar Kliwon",
+        "kelurahan": "Sangkrah",
+        "alamat": "Jl. S Indragiri, Kec. Pasar Kliwon",
+        "telepon": "0271-655061"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.846901,
+          -7.5598
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi/sibela",
+        "name": "Puskesmas Sibela",
+        "kategori_healthmap": "puskesmas",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi puskesmas Kota Surakarta. Alamat: Jl. Sibela Timur No. 1, Perum Mojosongo, Kec. Jebres. Telp: 0271-854252. Koordinat dari daftar; cek ulang di lapangan.",
+        "kecamatan": "Jebres",
+        "kelurahan": "Jebres",
+        "alamat": "Jl. Sibela Timur No. 1, Perum Mojosongo, Kec. Jebres",
+        "telepon": "0271-854252"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.837799,
+          -7.5648
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi/purwodiningratan",
+        "name": "Puskesmas Purwodiningratan",
+        "kategori_healthmap": "puskesmas",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi puskesmas Kota Surakarta. Alamat: Jl. Surya No. 49, Kec. Jebres. Telp: 0271-647545. Koordinat dari daftar; cek ulang di lapangan.",
+        "kecamatan": "Jebres",
+        "kelurahan": "Purwodiningratan",
+        "alamat": "Jl. Surya No. 49, Kec. Jebres",
+        "telepon": "0271-647545"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.834198,
+          -7.559
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi/ngoresan",
+        "name": "Puskesmas Ngoresan",
+        "kategori_healthmap": "puskesmas",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi puskesmas Kota Surakarta. Alamat: Jl. Kartika IV No. 12 RT 03/18, Kec. Jebres. Telp: 0271-646919. Koordinat dari daftar; cek ulang di lapangan.",
+        "kecamatan": "Jebres",
+        "kelurahan": "Tegalharjo",
+        "alamat": "Jl. Kartika IV No. 12 RT 03/18, Kec. Jebres",
+        "telepon": "0271-646919"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.851501,
+          -7.5704
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi/pucangsawit",
+        "name": "Puskesmas Pucangsawit",
+        "kategori_healthmap": "puskesmas",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi puskesmas Kota Surakarta. Alamat: Jl. Waringin No. 1 RT 03 RW 13 Pucangsari, Kec. Jebres. Telp: 0271-648990. Koordinat dari daftar; cek ulang di lapangan.",
+        "kecamatan": "Jebres",
+        "kelurahan": "Pucang Sawit",
+        "alamat": "Jl. Waringin No. 1 RT 03 RW 13 Pucangsari, Kec. Jebres",
+        "telepon": "0271-648990"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.803703,
+          -7.5408
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi/banyuanyar",
+        "name": "Puskesmas Banyuanyar",
+        "kategori_healthmap": "puskesmas",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi puskesmas Kota Surakarta. Alamat: Jl. Bone Utama No. 38, Kec. Banjarsari. Telp: 0271-711244. Koordinat dari daftar; cek ulang di lapangan.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Banyuanyar",
+        "alamat": "Jl. Bone Utama No. 38, Kec. Banjarsari",
+        "telepon": "0271-711244"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.805298,
+          -7.5563
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi/manahan",
+        "name": "Puskesmas Manahan",
+        "kategori_healthmap": "puskesmas",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi puskesmas Kota Surakarta. Alamat: Jl. Srigunting VII/11, Kec. Banjarsari. Telp: 0271-719313. Koordinat dari daftar; cek ulang di lapangan.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Manahan",
+        "alamat": "Jl. Srigunting VII/11, Kec. Banjarsari",
+        "telepon": "0271-719313"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.821297,
+          -7.5504
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi/nusukan",
+        "name": "Puskesmas Nusukan",
+        "kategori_healthmap": "puskesmas",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi puskesmas Kota Surakarta. Alamat: Jl. Sriwijaya Utara III/5, Kec. Banjarsari. Telp: 0271-717736. Koordinat dari daftar; cek ulang di lapangan.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Nusukan",
+        "alamat": "Jl. Sriwijaya Utara III/5, Kec. Banjarsari",
+        "telepon": "0271-717736"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.823997,
+          -7.5546
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi/gilingan",
+        "name": "Puskesmas Gilingan",
+        "kategori_healthmap": "puskesmas",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi puskesmas Kota Surakarta. Alamat: Jl. Bibis Wetan RT 03/19, Kec. Banjarsari. Telp: 0271-637025. Koordinat dari daftar; cek ulang di lapangan.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Gilingan",
+        "alamat": "Jl. Bibis Wetan RT 03/19, Kec. Banjarsari",
+        "telepon": "0271-637025"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8265,
+          -7.5632
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi/setabelan",
+        "name": "Puskesmas Setabelan",
+        "kategori_healthmap": "puskesmas",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi puskesmas Kota Surakarta. Alamat: Jl. D.I. Panjaitan No. 5, Ds. Setabelan, Kec. Banjarsari. Telp: 0271-641033. Koordinat dari daftar; cek ulang di lapangan.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Setabelan",
+        "alamat": "Jl. D.I. Panjaitan No. 5, Ds. Setabelan, Kec. Banjarsari",
+        "telepon": "0271-641033"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.826202,
+          -7.5378
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi/gambir-sari",
+        "name": "Puskesmas Gambir Sari",
+        "kategori_healthmap": "puskesmas",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi puskesmas Kota Surakarta. Alamat: Jl. Kelud Barat, Kadipiro, Kec. Banjarsari. Telp: 0271-857376. Koordinat dari daftar; cek ulang di lapangan.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Kadipiro",
+        "alamat": "Jl. Kelud Barat, Kadipiro, Kec. Banjarsari",
+        "telepon": "0271-857376"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8018449,
+          -7.5546792
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-bhayangkara-surakarta",
+        "name": "RS Bhayangkara Surakarta",
         "kategori_healthmap": "rumah_sakit",
         "keyakinan_klasifikasi": "tinggi",
-        "status_verifikasi": "verifikasi_lapangan",
-        "catatan_pembersihan": "Ditambahkan manual berdasarkan verifikasi lapangan; koordinat dari Google Maps."
-      },
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSU). Koordinat dari SIRS Kemenkes; cek ulang di lapangan.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Manahan",
+        "alamat": "Jalan Adi Sucipto No 2, Kota Surakarta"
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          110.812827,
-          -7.5261727
+          110.801648,
+          -7.564757
         ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-gigi-dan-mulut-soelastri",
+        "name": "RS Gigi dan Mulut Soelastri",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSK Gigi dan Mulut). Koordinat dari SIRS Kemenkes; cek ulang di lapangan.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Purwosari",
+        "alamat": "Jl. Brigjen Slamet Riyadi No. 366, Kota Surakarta"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.791552,
+          -7.552994
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-jih-solo",
+        "name": "RS JIH Solo",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSU). Koordinat dari SIRS Kemenkes; cek ulang di lapangan.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Kerten",
+        "alamat": "Jl. Adi Sucipto No 118, Jajar, Laweyan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.83079123710073,
+          -7.578711643734636
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-jiwa-daerah-dr-arif-zainudin",
+        "name": "RS Jiwa Daerah Dr. Arif Zainudin",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "sedang",
+        "status_verifikasi": "perlu_verifikasi",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSK Jiwa). Koordinat PERKIRAAN di tengah kecamatan Pasar Kliwon; alamat resmi: Jl. Ki Hajar Dewantoro No. 80. Cek ulang lokasinya.",
+        "kecamatan": "Pasar Kliwon",
+        "kelurahan": "Pasar Kliwon",
+        "alamat": "Jl. Ki Hajar Dewantoro No. 80, Kota Surakarta"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.852445,
+          -7.558352
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-kardiologi-emirates-indonesia",
+        "name": "RS Kardiologi Emirates Indonesia",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSK Jantung). Koordinat dari SIRS Kemenkes; cek ulang di lapangan.",
+        "kecamatan": "Jebres",
+        "kelurahan": "Jebres",
+        "alamat": "Jalan Surya II, Kota Surakarta"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.781845,
+          -7.548842
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-khusus-mata-solo",
+        "name": "RS Khusus Mata Solo",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSK Mata). Koordinat dari SIRS Kemenkes; cek ulang di lapangan.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Karangasem",
+        "alamat": "Jl. Adi Sucipto 169, Kota Surakarta"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.795856,
+          -7.552945
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-onkologi-solo",
+        "name": "RS Onkologi Solo",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSK Kanker). Koordinat dari SIRS Kemenkes; cek ulang di lapangan.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Kerten",
+        "alamat": "Jl. Siwalan No. 37, Kota Surakarta"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.8365908220641,
+          -7.583405316725987
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-pku-muhammadiyah-sampangan-surakarta",
+        "name": "RS PKU Muhammadiyah Sampangan Surakarta",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSU). Alamat resmi: Semanggi, Kec. Ps. Kliwon. Titik ditempatkan di pusat Kelurahan Semanggi karena koordinat SIRS di luar batas kecamatan; cek ulang di lapangan.",
+        "kecamatan": "Pasar Kliwon",
+        "kelurahan": "Semanggi",
+        "alamat": "Gang Cempaka 11, Semanggi, Kec. Pasar Kliwon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.817551,
+          -7.567156
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-pku-muhammadiyah-surakarta",
+        "name": "RS PKU Muhammadiyah Surakarta",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSU). Koordinat dari SIRS Kemenkes; cek ulang di lapangan.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Timuran",
+        "alamat": "Jln. Ronggowarsito 130, Kota Surakarta"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.782054,
+          -7.549214
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-ums-ar-fachrudin",
+        "name": "RS UMS Ar Fachrudin",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSU). Koordinat dari SIRS Kemenkes; cek ulang di lapangan.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Karangasem",
+        "alamat": "Jalan Adi Sucipto Nomor 167, Kota Surakarta"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.814444,
+          -7.551944
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-umum-brayat-minulya",
+        "name": "RS Umum Brayat Minulya",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSU). Koordinat dari SIRS Kemenkes; cek ulang di lapangan.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Manahan",
+        "alamat": "Jl. Dr. Setiabudi No. 106, Kota Surakarta"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.83274637021276,
+          -7.589976140425528
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-umum-daerah-bung-karno-kota-surakarta",
+        "name": "RS Umum Daerah Bung Karno Kota Surakarta",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSU). Alamat resmi: Mojo, Kec. Ps. Kliwon. Titik ditempatkan di pusat Kelurahan Mojo karena koordinat SIRS di luar batas kecamatan; cek ulang di lapangan.",
+        "kecamatan": "Pasar Kliwon",
+        "kelurahan": "Mojo",
+        "alamat": "Jl. Sungai Serang I, Mojo, Kec. Pasar Kliwon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.840003,
+          -7.558368
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-umum-daerah-dr-moewardi-surakarta",
+        "name": "RS Umum Daerah Dr. Moewardi Surakarta",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSU). Koordinat dari SIRS Kemenkes; cek ulang di lapangan.",
+        "kecamatan": "Jebres",
+        "kelurahan": "Jebres",
+        "alamat": "Jl. Kol Sutarto Nomor 132, Jebres"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.812325,
+          -7.530364
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-umum-daerah-ibu-fatmawati-soekarno",
+        "name": "RS Umum Daerah Ibu Fatmawati Soekarno",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSU). Koordinat dari SIRS Kemenkes; cek ulang di lapangan.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Banjarsari",
+        "alamat": "Jalan Lettu Sumarto nomor 1, Kota Surakarta"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.838547,
+          -7.554315
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-umum-dr-oen",
+        "name": "RS Umum Dr. Oen",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSU). Koordinat dari SIRS Kemenkes; cek ulang di lapangan.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Gilingan",
+        "alamat": "Jl. Brigjend Katamso No. 55, Kota Surakarta"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.84435,
+          -7.55836
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-umum-hermina-solo",
+        "name": "RS Umum Hermina Solo",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSU). Koordinat dari SIRS Kemenkes; cek ulang di lapangan.",
+        "kecamatan": "Jebres",
+        "kelurahan": "Jebres",
+        "alamat": "Jalan Kolonel Sutarto No. 16, Jebres"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.832252,
+          -7.578615
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-umum-islam-kustati",
+        "name": "RS Umum Islam Kustati",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSU). Koordinat dari SIRS Kemenkes; cek ulang di lapangan.",
+        "kecamatan": "Pasar Kliwon",
+        "kelurahan": "Pasar Kliwon",
+        "alamat": "Jl. Kapt. Mulyadi No. 249, Kota Surakarta"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.80373,
+          -7.56475
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-umum-kasih-ibu",
+        "name": "RS Umum Kasih Ibu",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSU). Koordinat dari SIRS Kemenkes; cek ulang di lapangan.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Purwosari",
+        "alamat": "Jl. Slamet Riyadi 404, Kota Surakarta"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.796338,
+          -7.555891
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-umum-panti-waluyo",
+        "name": "RS Umum Panti Waluyo",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSU). Koordinat dari SIRS Kemenkes; cek ulang di lapangan.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Kerten",
+        "alamat": "Jl. Jend A Yani No. 1-2, Kota Surakarta"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.787041,
+          -7.55454
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-umum-pusat-surakarta",
+        "name": "RS Umum Pusat Surakarta",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSU). Koordinat dari SIRS Kemenkes; cek ulang di lapangan.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Jajar",
+        "alamat": "Jl. Profesor Dr. R. Soeharso No. 28, Kota Surakarta"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.805,
+          -7.565833
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-umum-tk-iii-slamet-riyadi-surakarta",
+        "name": "RS Umum Tk III Slamet Riyadi Surakarta",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSU). Koordinat dari SIRS Kemenkes; cek ulang di lapangan.",
+        "kecamatan": "Laweyan",
+        "kelurahan": "Purwosari",
+        "alamat": "Jalan Slamet Riyadi No. 321, Laweyan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.82478,
+          -7.55736
+        ]
+      },
+      "properties": {
+        "@id": "daftar-resmi-rs/rs-umum-triharsi",
+        "name": "RS Umum Triharsi",
+        "kategori_healthmap": "rumah_sakit",
+        "keyakinan_klasifikasi": "tinggi",
+        "status_verifikasi": "klasifikasi_awal",
+        "catatan_pembersihan": "Daftar resmi RS Kota Surakarta (RSU). Koordinat dari SIRS Kemenkes; cek ulang di lapangan.",
+        "kecamatan": "Banjarsari",
+        "kelurahan": "Gilingan",
+        "alamat": "Jalan Monginsidi 82, Kota Surakarta"
       }
     }
   ]

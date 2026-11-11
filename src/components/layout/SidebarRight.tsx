@@ -12,7 +12,9 @@ import {
   type EquityCategory,
 } from "@/features/analysis/metrics";
 import { formatCoord, formatCount, formatDecimal } from "@/utils/format";
-import AnalyticsChart, { type ChartRow } from "@/components/dashboard/AnalyticsChart";
+import AnalyticsChart, {
+  type ChartRow,
+} from "@/components/dashboard/AnalyticsChart";
 import { citySummary, kecamatanStats } from "@/features/analysis/stats";
 
 interface SidebarRightProps {
@@ -60,7 +62,13 @@ const EQUITY_STYLE: Record<EquityCategory, string> = {
   Rendah: "text-danger bg-danger/10",
 };
 
-function FacilityDetail({ facility, onClear }: { facility: HealthcareFacility; onClear: () => void }) {
+function FacilityDetail({
+  facility,
+  onClear,
+}: {
+  facility: HealthcareFacility;
+  onClear: () => void;
+}) {
   const meta = FACILITY_META[facility.tipe];
   return (
     <div className="animate-fade-in-up flex flex-col gap-4">
@@ -70,10 +78,15 @@ function FacilityDetail({ facility, onClear }: { facility: HealthcareFacility; o
             className="inline-flex items-center gap-1.5 rounded-md px-2 py-0.5 text-[11px] font-semibold"
             style={{ backgroundColor: `${meta.color}1f`, color: meta.color }}
           >
-            <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: meta.color }} />
+            <span
+              className="h-1.5 w-1.5 rounded-full"
+              style={{ backgroundColor: meta.color }}
+            />
             {meta.label}
           </span>
-          <h2 className="mt-2 text-base font-semibold leading-snug text-ink">{facility.nama}</h2>
+          <h2 className="mt-2 text-base font-semibold leading-snug">
+            {facility.nama}
+          </h2>
         </div>
         <CloseButton onClick={onClear} />
       </div>
@@ -81,16 +94,32 @@ function FacilityDetail({ facility, onClear }: { facility: HealthcareFacility; o
       <dl className="rounded-xl border border-white/5 bg-panel-2/50 px-3">
         <DetailRow label="Jenis" value={meta.label} />
         <DetailRow label="Alamat" value={facility.alamat || NOT_AVAILABLE} />
-        <DetailRow label="Kelurahan" value={facility.kelurahan || "Lihat di peta"} />
-        <DetailRow label="Kecamatan" value={facility.kecamatan || "Lihat di peta"} />
-        <DetailRow label="Koordinat" value={`${formatCoord(facility.latitude)}, ${formatCoord(facility.longitude)}`} />
-        <DetailRow label="Keyakinan klasifikasi" value={facility.keyakinan || NOT_AVAILABLE} />
-        <DetailRow label="Status verifikasi" value={facility.statusVerifikasi.replace(/_/g, " ") || NOT_AVAILABLE} />
+        <DetailRow
+          label="Kelurahan"
+          value={facility.kelurahan || "Lihat di peta"}
+        />
+        <DetailRow
+          label="Kecamatan"
+          value={facility.kecamatan || "Lihat di peta"}
+        />
+        <DetailRow
+          label="Koordinat"
+          value={`${formatCoord(facility.latitude)}, ${formatCoord(facility.longitude)}`}
+        />
+        <DetailRow
+          label="Keyakinan klasifikasi"
+          value={facility.keyakinan || NOT_AVAILABLE}
+        />
+        <DetailRow
+          label="Status verifikasi"
+          value={facility.statusVerifikasi.replace(/_/g, " ") || NOT_AVAILABLE}
+        />
         <DetailRow label="Sumber" value={`OSM ${facility.osmRef}`} />
       </dl>
 
       <p className="text-[11px] leading-relaxed text-muted">
-        Kategori asli: <span className="text-ink/80">{facility.kategoriAsli}</span>.
+        Kategori asli:{" "}
+        <span className="text-ink/80">{facility.kategoriAsli}</span>.
       </p>
     </div>
   );
@@ -117,8 +146,10 @@ function KelurahanDetail({
   const ratio = facilityRatio(unit);
   const density = populationDensity(unit);
   const category = equity[unit.id] ?? null;
-  const fmtKm = (v: number | null) => (v === null ? "-" : `${formatDecimal(v, 2)} km`);
-  const pct = (v: number | null) => (v === null ? "-" : `${formatDecimal(v, 1)}%`);
+  const fmtKm = (v: number | null) =>
+    v === null ? "-" : `${formatDecimal(v, 2)} km`;
+  const pct = (v: number | null) =>
+    v === null ? "-" : `${formatDecimal(v, 1)}%`;
 
   return (
     <div className="animate-fade-in-up flex flex-col gap-4">
@@ -127,40 +158,83 @@ function KelurahanDetail({
           <span className="inline-flex rounded-md bg-accent/10 px-2 py-0.5 text-[11px] font-semibold text-accent">
             Kelurahan · {unit.kecamatan}
           </span>
-          <h2 className="mt-2 text-base font-semibold leading-snug text-ink">{unit.nama}</h2>
+          <h2 className="mt-2 text-base font-semibold leading-snug">
+            {unit.nama}
+          </h2>
         </div>
         <CloseButton onClick={onClear} />
       </div>
 
       <dl className="rounded-xl border border-white/5 bg-panel-2/50 px-3">
         <DetailRow label="Kecamatan" value={unit.kecamatan} />
-        <DetailRow label="Penduduk (2024)" value={unit.hasPopulation ? formatCount(unit.penduduk) : NOT_AVAILABLE} />
-        <DetailRow label="Luas wilayah" value={`${formatDecimal(unit.areaKm2, 2)} km²`} />
-        <DetailRow label="Kepadatan" value={density === null ? "-" : `${formatCount(Math.round(density))} jiwa/km²`} />
-        <DetailRow label="Rumah sakit (BPS)" value={formatCount(unit.rs)} />
-        <DetailRow label="Puskesmas (BPS)" value={formatCount(unit.puskesmas)} />
+        <DetailRow
+          label="Penduduk (2024)"
+          value={
+            unit.hasPopulation ? formatCount(unit.penduduk) : NOT_AVAILABLE
+          }
+        />
+        <DetailRow
+          label="Luas wilayah"
+          value={`${formatDecimal(unit.areaKm2, 2)} km²`}
+        />
+        <DetailRow
+          label="Kepadatan"
+          value={
+            density === null
+              ? "-"
+              : `${formatCount(Math.round(density))} jiwa/km²`
+          }
+        />
+        <DetailRow label="Rumah sakit (OSM)" value={formatCount(unit.rs)} />
+        <DetailRow
+          label="Puskesmas (OSM)"
+          value={formatCount(unit.puskesmas)}
+        />
         <DetailRow label="Klinik (OSM)" value={formatCount(unit.klinik)} />
         <DetailRow label="Apotek (OSM)" value={formatCount(unit.apotek)} />
-        <DetailRow label="Total fasilitas" value={formatCount(totalFacilities(unit))} />
-        <DetailRow label="Indeks kapasitas" value={index === null ? "-" : formatDecimal(index, 1)} />
-        <DetailRow label="Fasilitas per 10.000 penduduk" value={ratio === null ? "-" : formatDecimal(ratio, 1)} />
+        <DetailRow
+          label="Total fasilitas"
+          value={formatCount(totalFacilities(unit))}
+        />
+        <DetailRow
+          label="Indeks kapasitas"
+          value={index === null ? "-" : formatDecimal(index, 1)}
+        />
+        <DetailRow
+          label="Fasilitas per 10.000 penduduk"
+          value={ratio === null ? "-" : formatDecimal(ratio, 1)}
+        />
         <DetailRow label="Kategori pemerataan" value={category ?? "-"} />
-        <DetailRow label="Cakupan gabungan RS 3 km + puskesmas 1 km" value={pct(coverage)} />
-        <DetailRow label="Cakupan puskesmas 1 km saja" value={pct(coveragePkm)} />
+        <DetailRow
+          label="Cakupan gabungan RS 3 km + puskesmas 1 km"
+          value={pct(coverage)}
+        />
+        <DetailRow
+          label="Cakupan puskesmas 1 km saja"
+          value={pct(coveragePkm)}
+        />
         <DetailRow label="Jarak RS terdekat" value={fmtKm(unit.nearestKm.rs)} />
-        <DetailRow label="Jarak puskesmas terdekat" value={fmtKm(unit.nearestKm.puskesmas)} />
-        <DetailRow label="Jarak klinik terdekat" value={fmtKm(unit.nearestKm.klinik)} />
+        <DetailRow
+          label="Jarak puskesmas terdekat"
+          value={fmtKm(unit.nearestKm.puskesmas)}
+        />
+        <DetailRow
+          label="Jarak klinik terdekat"
+          value={fmtKm(unit.nearestKm.klinik)}
+        />
       </dl>
 
       {category && (
-        <span className={`w-fit rounded-md px-2 py-1 text-[11px] font-semibold ${EQUITY_STYLE[category]}`}>
+        <span
+          className={`w-fit rounded-md px-2 py-1 text-[11px] font-semibold ${EQUITY_STYLE[category]}`}
+        >
           Kapasitas {category.toLowerCase()} dibanding {units.length} kelurahan
         </span>
       )}
 
       <p className="text-[11px] leading-relaxed text-muted">
-        Jarak dihitung garis lurus dari pusat wilayah ke titik OSM terdekat, bukan waktu tempuh. RS dan puskesmas
-        memakai data BPS 2024; klinik dan apotek memakai titik OSM di dalam wilayah.
+        Jarak dihitung garis lurus dari pusat wilayah ke titik OSM terdekat,
+        bukan waktu tempuh. RS dan puskesmas memakai titik OSM di dalam wilayah.
       </p>
     </div>
   );
@@ -193,11 +267,18 @@ function KecamatanDetail({
   const index = penduduk > 0 ? (score / penduduk) * 10000 : null;
   const ratio = penduduk > 0 ? (total / penduduk) * 10000 : null;
 
-  const areaWeighted = (values: Record<string, number | null>): number | null => {
-    const withValue = members.filter((u) => values[u.id] !== null && values[u.id] !== undefined);
+  const areaWeighted = (
+    values: Record<string, number | null>,
+  ): number | null => {
+    const withValue = members.filter(
+      (u) => values[u.id] !== null && values[u.id] !== undefined,
+    );
     const withArea = withValue.reduce((sum, u) => sum + u.areaKm2, 0);
     if (withArea <= 0) return null;
-    return withValue.reduce((sum, u) => sum + (values[u.id] ?? 0) * u.areaKm2, 0) / withArea;
+    return (
+      withValue.reduce((sum, u) => sum + (values[u.id] ?? 0) * u.areaKm2, 0) /
+      withArea
+    );
   };
   const coverage = areaWeighted(coverageByUnit);
   const coveragePkm = areaWeighted(puskesmasByUnit);
@@ -209,31 +290,65 @@ function KecamatanDetail({
           <span className="inline-flex rounded-md bg-violet-500/15 px-2 py-0.5 text-[11px] font-semibold text-violet-300">
             Kecamatan · {members.length} kelurahan
           </span>
-          <h2 className="mt-2 text-base font-semibold leading-snug text-ink">{shape.nama}</h2>
+          <h2 className="mt-2 text-base font-semibold leading-snug">
+            {shape.nama}
+          </h2>
         </div>
         <CloseButton onClick={onClear} />
       </div>
 
       <dl className="rounded-xl border border-white/5 bg-panel-2/50 px-3">
-        <DetailRow label="Penduduk (2024)" value={penduduk > 0 ? formatCount(penduduk) : NOT_AVAILABLE} />
-        <DetailRow label="Luas wilayah" value={`${formatDecimal(area, 2)} km²`} />
-        <DetailRow label="Kepadatan" value={penduduk > 0 && area > 0 ? `${formatCount(Math.round(penduduk / area))} jiwa/km²` : "-"} />
-        <DetailRow label="Rumah sakit (BPS)" value={formatCount(rs)} />
-        <DetailRow label="Puskesmas (BPS)" value={formatCount(puskesmas)} />
+        <DetailRow
+          label="Penduduk (2024)"
+          value={penduduk > 0 ? formatCount(penduduk) : NOT_AVAILABLE}
+        />
+        <DetailRow
+          label="Luas wilayah"
+          value={`${formatDecimal(area, 2)} km²`}
+        />
+        <DetailRow
+          label="Kepadatan"
+          value={
+            penduduk > 0 && area > 0
+              ? `${formatCount(Math.round(penduduk / area))} jiwa/km²`
+              : "-"
+          }
+        />
+        <DetailRow label="Rumah sakit (OSM)" value={formatCount(rs)} />
+        <DetailRow label="Puskesmas (OSM)" value={formatCount(puskesmas)} />
         <DetailRow label="Klinik (OSM)" value={formatCount(klinik)} />
         <DetailRow label="Apotek (OSM)" value={formatCount(apotek)} />
         <DetailRow label="Total fasilitas" value={formatCount(total)} />
-        <DetailRow label="Indeks kapasitas" value={index === null ? "-" : formatDecimal(index, 1)} />
-        <DetailRow label="Fasilitas per 10.000 penduduk" value={ratio === null ? "-" : formatDecimal(ratio, 1)} />
-        <DetailRow label="Cakupan gabungan RS 3 km + puskesmas 1 km" value={coverage === null ? "-" : `${formatDecimal(coverage, 1)}%`} />
-        <DetailRow label="Cakupan puskesmas 1 km saja" value={coveragePkm === null ? "-" : `${formatDecimal(coveragePkm, 1)}%`} />
+        <DetailRow
+          label="Indeks kapasitas"
+          value={index === null ? "-" : formatDecimal(index, 1)}
+        />
+        <DetailRow
+          label="Fasilitas per 10.000 penduduk"
+          value={ratio === null ? "-" : formatDecimal(ratio, 1)}
+        />
+        <DetailRow
+          label="Cakupan gabungan RS 3 km + puskesmas 1 km"
+          value={coverage === null ? "-" : `${formatDecimal(coverage, 1)}%`}
+        />
+        <DetailRow
+          label="Cakupan puskesmas 1 km saja"
+          value={
+            coveragePkm === null ? "-" : `${formatDecimal(coveragePkm, 1)}%`
+          }
+        />
       </dl>
 
       <div>
-        <p className="mb-2 text-[11px] uppercase tracking-[0.14em] text-muted">Kelurahan</p>
+        <p className="mb-2 text-[11px] uppercase tracking-[0.14em] text-muted">
+          Kelurahan
+        </p>
         <div className="flex flex-wrap gap-1.5">
           {members.map((u) => (
-            <span key={u.id} className="rounded-md border border-white/10 bg-panel-2/60 px-2 py-0.5 text-[11px] text-ink">
+            <span
+              key={u.id}
+              className="rounded-md border border-white/10 bg-panel-2/60 px-2 py-0.5 text-[11px] text-ink"
+            >
               {u.nama}
             </span>
           ))}
@@ -241,8 +356,9 @@ function KecamatanDetail({
       </div>
 
       <p className="text-[11px] leading-relaxed text-muted">
-        Cakupan kecamatan adalah rata-rata tertimbang luas kelurahan. Buffer 1 km (puskesmas) dan 3 km (RS) adalah
-        parameter simulasi, bukan standar resmi.
+        Cakupan kecamatan adalah rata-rata tertimbang luas kelurahan. Buffer 1
+        km (puskesmas) dan 3 km (RS) adalah parameter simulasi, bukan standar
+        resmi.
       </p>
     </div>
   );
@@ -266,64 +382,133 @@ function Summary({
   const facilityRows: ChartRow[] = stats.map((st) => ({
     label: st.nama,
     segments: [
-      { key: "rs", label: "RS", value: st.rs, color: FACILITY_META.hospital.color },
-      { key: "pus", label: "Puskesmas", value: st.puskesmas, color: FACILITY_META.puskesmas.color },
-      { key: "klinik", label: "Klinik", value: st.klinik, color: FACILITY_META.clinic.color },
-      { key: "apotek", label: "Apotek", value: st.apotek, color: FACILITY_META.pharmacy.color },
+      {
+        key: "rs",
+        label: "RS",
+        value: st.rs,
+        color: FACILITY_META.hospital.color,
+      },
+      {
+        key: "pus",
+        label: "Puskesmas",
+        value: st.puskesmas,
+        color: FACILITY_META.puskesmas.color,
+      },
+      {
+        key: "klinik",
+        label: "Klinik",
+        value: st.klinik,
+        color: FACILITY_META.clinic.color,
+      },
+      {
+        key: "apotek",
+        label: "Apotek",
+        value: st.apotek,
+        color: FACILITY_META.pharmacy.color,
+      },
     ],
   }));
   const indexRows: ChartRow[] = stats.map((st) => ({
     label: st.nama,
-    segments: [{ key: "idx", label: "Indeks", value: st.capacityIndex ?? 0, color: "#22C55E" }],
-    valueText: st.capacityIndex === null ? "-" : formatDecimal(st.capacityIndex, 1),
+    segments: [
+      {
+        key: "idx",
+        label: "Indeks",
+        value: st.capacityIndex ?? 0,
+        color: "#22C55E",
+      },
+    ],
+    valueText:
+      st.capacityIndex === null ? "-" : formatDecimal(st.capacityIndex, 1),
   }));
   const density = stats.map((st) => ({
     label: st.nama,
-    segments: [{ key: "pdd", label: "Penduduk", value: st.penduduk, color: "#7000FF" }],
+    segments: [
+      { key: "pdd", label: "Penduduk", value: st.penduduk, color: "#7000FF" },
+    ],
     valueText: st.penduduk > 0 ? formatCount(st.penduduk) : "-",
   }));
 
   return (
     <div className="flex flex-col gap-4">
       <div className="animate-fade-in-up">
-        <h2 className="text-base font-semibold text-ink">Dashboard Kota Surakarta</h2>
+        <h2 className="text-base font-semibold">
+          Dashboard Kota Surakarta
+        </h2>
         <p className="mt-1 text-xs leading-relaxed text-muted">
-          Pilih kelurahan, kecamatan, atau marker fasilitas pada peta untuk melihat detailnya.
+          Pilih kelurahan, kecamatan, atau marker fasilitas pada peta untuk
+          melihat detailnya.
         </p>
       </div>
 
-      <div className="animate-fade-in-up grid grid-cols-2 gap-2" style={{ animationDelay: "40ms" }}>
+      <div
+        className="animate-fade-in-up grid grid-cols-2 gap-2"
+        style={{ animationDelay: "40ms" }}
+      >
         {FACILITY_TYPES.map((type) => (
-          <div key={type} className="rounded-xl border border-white/5 bg-panel-2/50 p-3">
-            <p className="text-[11px] text-muted">{FACILITY_META[type].label}</p>
-            <p className="mt-1 text-xl font-semibold tabular-nums" style={{ color: FACILITY_META[type].color }}>
+          <div
+            key={type}
+            className="rounded-xl border border-white/5 bg-panel-2/50 p-3"
+          >
+            <p className="text-[11px] text-muted">
+              {FACILITY_META[type].label}
+            </p>
+            <p
+              className="mt-1 text-xl font-semibold tabular-nums"
+              style={{ color: FACILITY_META[type].color }}
+            >
               {formatCount(counts[type])}
             </p>
           </div>
         ))}
       </div>
 
-      <dl className="animate-fade-in-up rounded-xl border border-white/5 bg-panel-2/50 px-3" style={{ animationDelay: "80ms" }}>
+      <dl
+        className="animate-fade-in-up rounded-xl border border-white/5 bg-panel-2/50 px-3"
+        style={{ animationDelay: "80ms" }}
+      >
         <DetailRow label="Total fasilitas (OSM)" value={formatCount(total)} />
         <DetailRow label="Kelurahan" value={formatCount(city.kelurahan)} />
         <DetailRow label="Kecamatan" value={formatCount(stats.length)} />
-        <DetailRow label="Penduduk (2024)" value={population > 0 ? formatCount(population) : NOT_AVAILABLE} />
-        <DetailRow label="RS / puskesmas (BPS)" value={`${formatCount(city.rs)} / ${formatCount(city.puskesmas)}`} />
-        <DetailRow label="Rasio per 10.000 penduduk" value={population > 0 ? formatDecimal((city.total / population) * 10000, 1) : "-"} />
+        <DetailRow
+          label="Penduduk (2024)"
+          value={population > 0 ? formatCount(population) : NOT_AVAILABLE}
+        />
+        <DetailRow
+          label="RS / puskesmas (OSM)"
+          value={`${formatCount(city.rs)} / ${formatCount(city.puskesmas)}`}
+        />
+        <DetailRow
+          label="Rasio per 10.000 penduduk"
+          value={
+            population > 0
+              ? formatDecimal((city.total / population) * 10000, 1)
+              : "-"
+          }
+        />
       </dl>
 
       {city.highest && city.lowest && (
-        <div className="animate-fade-in-up flex flex-col gap-2" style={{ animationDelay: "120ms" }}>
+        <div
+          className="animate-fade-in-up flex flex-col gap-2"
+          style={{ animationDelay: "120ms" }}
+        >
           <div className="rounded-xl border border-success/20 bg-success/5 px-3 py-2.5">
             <p className="text-[11px] text-muted">Indeks kapasitas tertinggi</p>
             <p className="text-sm font-medium text-ink">
-              {city.highest.nama} <span className="text-success tabular-nums">({formatDecimal(city.highest.value, 1)})</span>
+              {city.highest.nama}{" "}
+              <span className="text-success tabular-nums">
+                ({formatDecimal(city.highest.value, 1)})
+              </span>
             </p>
           </div>
           <div className="rounded-xl border border-danger/20 bg-danger/5 px-3 py-2.5">
             <p className="text-[11px] text-muted">Indeks kapasitas terendah</p>
             <p className="text-sm font-medium text-ink">
-              {city.lowest.nama} <span className="text-danger tabular-nums">({formatDecimal(city.lowest.value, 1)})</span>
+              {city.lowest.nama}{" "}
+              <span className="text-danger tabular-nums">
+                ({formatDecimal(city.lowest.value, 1)})
+              </span>
             </p>
           </div>
         </div>
@@ -333,8 +518,8 @@ function Summary({
         title="Fasilitas per kecamatan"
         delayMs={160}
         legend={[
-          { label: "RS (BPS)", color: FACILITY_META.hospital.color },
-          { label: "Puskesmas (BPS)", color: FACILITY_META.puskesmas.color },
+          { label: "RS (OSM)", color: FACILITY_META.hospital.color },
+          { label: "Puskesmas (OSM)", color: FACILITY_META.puskesmas.color },
           { label: "Klinik (OSM)", color: FACILITY_META.clinic.color },
           { label: "Apotek (OSM)", color: FACILITY_META.pharmacy.color },
         ]}
@@ -355,9 +540,12 @@ function Summary({
         rows={density}
       />
 
-      <p className="animate-fade-in-up text-[11px] leading-relaxed text-muted" style={{ animationDelay: "280ms" }}>
-        Indeks kapasitas bergantung pada bobot di sidebar kiri. RS dan puskesmas memakai data BPS 2024; klinik dan
-        apotek memakai titik OSM. Kedua sumber tidak sepenuhnya sama.
+      <p
+        className="animate-fade-in-up text-[11px] leading-relaxed text-muted"
+        style={{ animationDelay: "280ms" }}
+      >
+        Indeks kapasitas bergantung pada bobot di sidebar kiri. Seluruh
+        fasilitas dihitung dari titik OSM di dalam wilayah kelurahan.
       </p>
     </div>
   );
@@ -385,7 +573,13 @@ export default function SidebarRight({
       }`}
     >
       <div className="scroll-thin h-full w-80 overflow-y-auto p-4 pt-14">
-        {facility && <FacilityDetail key={facility.id} facility={facility} onClear={onClearSelection} />}
+        {facility && (
+          <FacilityDetail
+            key={facility.id}
+            facility={facility}
+            onClear={onClearSelection}
+          />
+        )}
         {!facility && unit && (
           <KelurahanDetail
             key={unit.id}
@@ -409,7 +603,14 @@ export default function SidebarRight({
             onClear={onClearSelection}
           />
         )}
-        {!facility && !unit && !kecamatan && <Summary units={units} weights={weights} counts={counts} total={total} />}
+        {!facility && !unit && !kecamatan && (
+          <Summary
+            units={units}
+            weights={weights}
+            counts={counts}
+            total={total}
+          />
+        )}
       </div>
     </aside>
   );

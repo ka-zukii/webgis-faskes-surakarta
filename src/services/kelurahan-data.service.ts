@@ -7,17 +7,8 @@ export interface PopulationRow {
   penduduk: number;
 }
 
-export interface BpsFacilityRow {
-  kecamatan: string;
-  kelurahan: string;
-  rsUmum: number;
-  rsKhusus: number;
-  puskesmas: number;
-}
-
 export interface KelurahanTables {
   penduduk: PopulationRow[];
-  bps: BpsFacilityRow[];
 }
 
 function toCount(value: string | undefined): number {
@@ -40,12 +31,9 @@ async function fetchRows(fileName: string, signal?: AbortSignal): Promise<Record
   return parsed.data;
 }
 
-/** Memuat tabel penduduk dan fasilitas per kelurahan (BPS 2024). */
+/** Memuat tabel penduduk per kelurahan (BPS 2024). Fasilitas diambil dari OSM. */
 export async function loadKelurahanTables(signal?: AbortSignal): Promise<KelurahanTables> {
-  const [pendudukRows, bpsRows] = await Promise.all([
-    fetchRows("penduduk_kelurahan_2024.csv", signal),
-    fetchRows("fasilitas_kelurahan_2024.csv", signal),
-  ]);
+  const pendudukRows = await fetchRows("penduduk_kelurahan_2024.csv", signal);
 
   return {
     penduduk: pendudukRows
@@ -54,15 +42,6 @@ export async function loadKelurahanTables(signal?: AbortSignal): Promise<Kelurah
         kecamatan: (row.kecamatan ?? "").trim(),
         kelurahan: row.kelurahan.trim(),
         penduduk: toCount(row.jumlah_penduduk_2024),
-      })),
-    bps: bpsRows
-      .filter((row) => (row.kelurahan ?? "").trim() !== "")
-      .map((row) => ({
-        kecamatan: (row.kecamatan ?? "").trim(),
-        kelurahan: row.kelurahan.trim(),
-        rsUmum: toCount(row.rs_umum),
-        rsKhusus: toCount(row.rs_khusus),
-        puskesmas: toCount(row.puskesmas),
       })),
   };
 }

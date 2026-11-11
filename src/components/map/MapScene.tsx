@@ -1,9 +1,15 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import type { ComponentRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Grid, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
-import type { HealthcareFacility, FocusRequest, SceneCameraInfo, Selection, VisibleTypes } from "@/types";
+import type {
+  HealthcareFacility,
+  FocusRequest,
+  SceneCameraInfo,
+  Selection,
+  VisibleTypes,
+} from "@/types";
 import type { KelurahanUnit, KecamatanShape } from "@/features/analysis/units";
 import type { UnitStyle } from "@/features/analysis/metrics";
 import FacilityLayer from "@/components/map/FacilityLayer";
@@ -18,7 +24,8 @@ type OrbitRef = ComponentRef<typeof OrbitControls>;
 const DEFAULT_CAMERA_POSITION = new THREE.Vector3(0, 9, 9);
 const DEFAULT_TARGET = new THREE.Vector3(0, 0, 0);
 const FOCUS_OFFSET = new THREE.Vector3(0, 2.6, 2.6);
-const REPORT_INTERVAL_SECONDS = 0.2;
+const REPORT_INTERVAL_SECONDS = 0.5;
+const REPORT_MIN_DISTANCE_CHANGE = 0.02; // 2% perubahan jarak kamera
 
 interface CameraGoal {
   position: THREE.Vector3;
@@ -80,6 +87,25 @@ function SceneContents(props: SceneProps) {
   const controlsRef = useRef<OrbitRef>(null);
   const goalRef = useRef<CameraGoal | null>(null);
   const lastReportRef = useRef(-Infinity);
+  const lastInfoRef = useRef<SceneCameraInfo | null>(null);
+
+  // Callback stabil agar FacilityLayer/KelurahanLayer tidak render ulang setiap frame laporan kamera.
+  const handleFacilityHover = useCallback(
+    (id: string | null) => onHover(id ? { kind: "facility", id } : null),
+    [onHover],
+  );
+  const handleFacilitySelect = useCallback(
+    (id: string) => onSelect({ kind: "facility", id }),
+    [onSelect],
+  );
+  const handleUnitHover = useCallback(
+    (id: string | null) => onHover(id ? { kind: "kelurahan", id } : null),
+    [onHover],
+  );
+  const handleUnitSelect = useCallback(
+    (id: string) => onSelect({ kind: "kelurahan", id }),
+    [onSelect],
+  );
 
   // Reset kamera: transisi halus kembali ke tampilan keseluruhan.
   useEffect(() => {
@@ -125,12 +151,27 @@ function SceneContents(props: SceneProps) {
       lastReportRef.current = now;
       const { lon, lat } = sceneToLonLat(controls.target.x, controls.target.z);
       const distance = state.camera.position.distanceTo(controls.target);
-      onCameraChange({ lon, lat, distance, zoom: computeZoom(distance) });
+      const zoom = computeZoom(distance);
+      const prev = lastInfoRef.current;
+      // Lapor ke React hanya jika berubah berarti, agar App tidak render ulang terus-menerus.
+      const changed =
+        !prev ||
+        Math.abs(prev.lon - lon) > 1e-5 ||
+        Math.abs(prev.lat - lat) > 1e-5 ||
+        Math.abs(prev.distance - distance) / Math.max(distance, 0.01) >
+          REPORT_MIN_DISTANCE_CHANGE ||
+        prev.zoom !== zoom;
+      if (changed) {
+        const info = { lon, lat, distance, zoom };
+        lastInfoRef.current = info;
+        onCameraChange(info);
+      }
     }
   });
 
   const hoveredFacilityId = hovered?.kind === "facility" ? hovered.id : null;
-  const selectedFacilityId = selection?.kind === "facility" ? selection.id : null;
+  const selectedFacilityId =
+    selection?.kind === "facility" ? selection.id : null;
   const hoveredUnitId = hovered?.kind === "kelurahan" ? hovered.id : null;
   const selectedUnitId = selection?.kind === "kelurahan" ? selection.id : null;
 
@@ -141,8 +182,18 @@ function SceneContents(props: SceneProps) {
 
       <ambientLight intensity={0.6} />
       <directionalLight position={[6, 12, 6]} intensity={1.1} />
-      <pointLight position={[-6, 4, -6]} color="#00E5FF" intensity={0.8} distance={30} />
-      <pointLight position={[6, 4, 6]} color="#7000FF" intensity={0.5} distance={30} />
+      <pointLight
+        position={[-6, 4, -6]}
+        color="#00E5FF"
+        intensity={0.8}
+        distance={30}
+      />
+      <pointLight
+        position={[6, 4, 6]}
+        color="#7000FF"
+        intensity={0.5}
+        distance={30}
+      />
 
       <Grid
         args={[60, 60]}
@@ -163,11 +214,15 @@ function SceneContents(props: SceneProps) {
         visible={showKelurahan}
         hoveredId={hoveredUnitId}
         selectedId={selectedUnitId}
-        onHover={(id) => onHover(id ? { kind: "kelurahan", id } : null)}
-        onSelect={(id) => onSelect({ kind: "kelurahan", id })}
+        onHover={handleUnitHover}
+        onSelect={handleUnitSelect}
       />
 
-      <KecamatanLayer shapes={kecamatan} visible={showKecamatan} selectedNama={selectedKecamatan} />
+      <KecamatanLayer
+        shapes={kecamatan}
+        visible={showKecamatan}
+        selectedNama={selectedKecamatan}
+      />
 
       <CoverageLayer coverage={coverage} visible={showCoverage} />
 
@@ -177,13 +232,18 @@ function SceneContents(props: SceneProps) {
         liftById={facilityLift}
         hoveredId={hoveredFacilityId}
         selectedId={selectedFacilityId}
-        onHover={(id) => onHover(id ? { kind: "facility", id } : null)}
-        onSelect={(id) => onSelect({ kind: "facility", id })}
+        onHover={handleFacilityHover}
+        onSelect={handleFacilitySelect}
       />
 
+      {/* Saat pengguna mulai memutar/menggeser kamera, animasi terbang otomatis dibatalkan
+          agar kamera tidak "tertarik balik" ke tujuan lama. */}
       <OrbitControls
         ref={controlsRef}
         makeDefault
+        onStart={() => {
+          goalRef.current = null;
+        }}
         enableDamping
         dampingFactor={0.08}
         minDistance={1.5}
@@ -195,7 +255,11 @@ function SceneContents(props: SceneProps) {
   );
 }
 
-export default function MapScene({ onReady, onSelect, ...props }: MapSceneProps) {
+export default function MapScene({
+  onReady,
+  onSelect,
+  ...props
+}: MapSceneProps) {
   return (
     <Canvas
       className="h-full w-full"
