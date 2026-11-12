@@ -470,7 +470,7 @@ function Summary({
     <div className="flex flex-col gap-4">
       <div className="animate-fade-in-up">
         <h2
-          className="text-base font-semibold text-white"
+          className="font-semibold text-white"
           style={{ color: "#FFFFFF" }}
         >
           Dashboard Kota Surakarta
