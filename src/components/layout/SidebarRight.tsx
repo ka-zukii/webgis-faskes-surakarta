@@ -16,6 +16,8 @@ import AnalyticsChart, {
   type ChartRow,
 } from "@/components/dashboard/AnalyticsChart";
 import { citySummary, kecamatanStats } from "@/features/analysis/stats";
+import type { EquityConfig } from "@/features/analysis/equity-config";
+import EquityPanel from "@/components/dashboard/EquityPanel";
 
 interface SidebarRightProps {
   open: boolean;
@@ -29,6 +31,8 @@ interface SidebarRightProps {
   weights: CapacityWeights;
   counts: Record<FacilityType, number>;
   total: number;
+  equityConfig: EquityConfig;
+  onEquityConfigChange: (next: EquityConfig) => void;
   onClearSelection: () => void;
 }
 
@@ -192,13 +196,22 @@ function KelurahanDetail({
               : `${formatCount(Math.round(density))} jiwa/km²`
           }
         />
-        <DetailRow label="Rumah sakit (RS Online)" value={formatCount(unit.rs)} />
+        <DetailRow
+          label="Rumah sakit (RS Online)"
+          value={formatCount(unit.rs)}
+        />
         <DetailRow
           label="Puskesmas (OpenStreetMap)"
           value={formatCount(unit.puskesmas)}
         />
-        <DetailRow label="Klinik (OpenStreetMap)" value={formatCount(unit.klinik)} />
-        <DetailRow label="Apotek (OpenStreetMap)" value={formatCount(unit.apotek)} />
+        <DetailRow
+          label="Klinik (OpenStreetMap)"
+          value={formatCount(unit.klinik)}
+        />
+        <DetailRow
+          label="Apotek (OpenStreetMap)"
+          value={formatCount(unit.apotek)}
+        />
         <DetailRow
           label="Total fasilitas"
           value={formatCount(totalFacilities(unit))}
@@ -240,8 +253,9 @@ function KelurahanDetail({
       )}
 
       <p className="text-[11px] leading-relaxed text-muted">
-        Jarak dihitung garis lurus dari pusat wilayah ke titik fasilitas terdekat,
-        bukan waktu tempuh. RS dan puskesmas memakai titik fasilitas di dalam wilayah.
+        Jarak dihitung garis lurus dari pusat wilayah ke titik fasilitas
+        terdekat, bukan waktu tempuh. RS dan puskesmas memakai titik fasilitas
+        di dalam wilayah.
       </p>
     </div>
   );
@@ -322,7 +336,10 @@ function KecamatanDetail({
           }
         />
         <DetailRow label="Rumah sakit (RS Online)" value={formatCount(rs)} />
-        <DetailRow label="Puskesmas (OpenStreetMap)" value={formatCount(puskesmas)} />
+        <DetailRow
+          label="Puskesmas (OpenStreetMap)"
+          value={formatCount(puskesmas)}
+        />
         <DetailRow label="Klinik (OpenStreetMap)" value={formatCount(klinik)} />
         <DetailRow label="Apotek (OpenStreetMap)" value={formatCount(apotek)} />
         <DetailRow label="Total fasilitas" value={formatCount(total)} />
@@ -376,11 +393,15 @@ function Summary({
   weights,
   counts,
   total,
+  equityConfig,
+  onEquityConfigChange,
 }: {
   units: KelurahanUnit[];
   weights: CapacityWeights;
   counts: Record<FacilityType, number>;
   total: number;
+  equityConfig: EquityConfig;
+  onEquityConfigChange: (next: EquityConfig) => void;
 }) {
   const city = citySummary(units, weights);
   const stats = kecamatanStats(units, weights);
@@ -439,9 +460,7 @@ function Summary({
   return (
     <div className="flex flex-col gap-4">
       <div className="animate-fade-in-up">
-        <h2 className="text-base font-semibold">
-          Dashboard Kota Surakarta
-        </h2>
+        <h2 className="text-base font-semibold">Dashboard Kota Surakarta</h2>
         <p className="mt-1 text-xs leading-relaxed text-muted">
           Pilih kelurahan, kecamatan, atau marker fasilitas pada peta untuk
           melihat detailnya.
@@ -495,6 +514,13 @@ function Summary({
         />
       </dl>
 
+      <EquityPanel
+        units={units}
+        weights={weights}
+        config={equityConfig}
+        onConfigChange={onEquityConfigChange}
+      />
+
       {city.highest && city.lowest && (
         <div
           className="animate-fade-in-up flex flex-col gap-2"
@@ -526,9 +552,18 @@ function Summary({
         delayMs={160}
         legend={[
           { label: "RS (RS Online)", color: FACILITY_META.hospital.color },
-          { label: "Puskesmas (OpenStreetMap)", color: FACILITY_META.puskesmas.color },
-          { label: "Klinik (OpenStreetMap)", color: FACILITY_META.clinic.color },
-          { label: "Apotek (OpenStreetMap)", color: FACILITY_META.pharmacy.color },
+          {
+            label: "Puskesmas (OpenStreetMap)",
+            color: FACILITY_META.puskesmas.color,
+          },
+          {
+            label: "Klinik (OpenStreetMap)",
+            color: FACILITY_META.clinic.color,
+          },
+          {
+            label: "Apotek (OpenStreetMap)",
+            color: FACILITY_META.pharmacy.color,
+          },
         ]}
         rows={facilityRows}
       />
@@ -570,6 +605,8 @@ export default function SidebarRight({
   weights,
   counts,
   total,
+  equityConfig,
+  onEquityConfigChange,
   onClearSelection,
 }: SidebarRightProps) {
   return (
@@ -616,6 +653,8 @@ export default function SidebarRight({
             weights={weights}
             counts={counts}
             total={total}
+            equityConfig={equityConfig}
+            onEquityConfigChange={onEquityConfigChange}
           />
         )}
       </div>

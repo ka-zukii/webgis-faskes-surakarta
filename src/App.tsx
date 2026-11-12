@@ -25,6 +25,10 @@ import {
 } from "@/features/analysis/metrics";
 import { computeCoverage } from "@/features/analysis/coverage";
 import { equityCategories } from "@/features/analysis/metrics";
+import {
+  DEFAULT_EQUITY_CONFIG,
+  type EquityConfig,
+} from "@/features/analysis/equity-config";
 import { lonLatToScene, type ScenePoint } from "@/utils/projection";
 import { pointInPolygons } from "@/utils/geometry";
 import type {
@@ -84,6 +88,9 @@ export default function App() {
   const [analysisMode, setAnalysisMode] =
     useState<AnalysisModeId>("persebaran");
   const [weights, setWeights] = useState<CapacityWeights>(DEFAULT_WEIGHTS);
+  const [equityConfig, setEquityConfig] = useState<EquityConfig>(
+    DEFAULT_EQUITY_CONFIG,
+  );
   const [showKelurahan, setShowKelurahan] = useState(true);
   const [showKecamatan, setShowKecamatan] = useState(true);
   const [showCoverage, setShowCoverage] = useState(false);
@@ -349,6 +356,8 @@ export default function App() {
           weights={weights}
           counts={counts}
           total={facilities.length}
+          equityConfig={equityConfig}
+          onEquityConfigChange={setEquityConfig}
           onClearSelection={() => setSelection(null)}
         />
       </div>
