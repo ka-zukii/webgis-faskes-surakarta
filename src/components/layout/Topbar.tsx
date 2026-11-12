@@ -60,12 +60,12 @@ export default function Topbar({
 
   return (
     <>
-      <header className="glass relative z-30 flex h-14 shrink-0 items-center justify-between gap-4 border-x-0 border-t-0 px-4">
-        <div className="flex min-w-0 items-center gap-3">
+      <header className="glass relative z-30 flex shrink-0 flex-wrap items-center justify-between gap-x-3 gap-y-2 border-x-0 border-t-0 px-3 py-2 md:h-14 md:flex-nowrap md:gap-4 md:px-4 md:py-0">
+        <div className="flex min-w-0 items-center gap-2 md:gap-3">
           <img
             src="/logo.png"
             alt="Logo SehatMerata"
-            className="h-16 w-16 shrink-0 object-contain"
+            className="h-10 w-10 shrink-0 object-contain md:h-16 md:w-16"
           />
           <div className="flex min-w-0 items-baseline gap-2">
             <span className="truncate text-[15px] font-semibold tracking-tight">
@@ -81,37 +81,42 @@ export default function Topbar({
           </div>
         </div>
 
-        <div className="hidden min-w-0 flex-1 justify-center px-2 md:flex">
+        <div className="order-last flex w-full min-w-0 justify-center md:order-none md:w-auto md:flex-1 md:px-2">
           <SearchBox items={searchItems} onPick={onSearchPick} />
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2">
           <button
             type="button"
             onClick={onStartStory}
+            aria-label="Mulai presentasi"
             title={`${statusText} · ${boundaryAvailable ? "Batas wilayah tersedia" : "Batas wilayah belum ada"}`}
-            className="flex items-center gap-1.5 rounded-lg border border-accent/40 bg-accent/10 px-3 py-1.5 text-xs font-semibold text-accent transition hover:bg-accent/20"
+            className="flex items-center gap-1.5 rounded-lg border border-accent/40 bg-accent/10 px-2.5 py-1.5 text-xs font-semibold text-accent transition hover:bg-accent/20 sm:px-3"
           >
             <Presentation size={14} />
-            Mulai presentasi
+            <span className="hidden sm:inline">Mulai presentasi</span>
           </button>
 
           <button
             type="button"
             onClick={() => setGuideOpen(true)}
-            className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-panel-2/70 px-3 py-1.5 text-xs font-medium text-ink transition hover:border-accent/50 hover:text-accent"
+            aria-label="Panduan & Metodologi"
+            title="Panduan & Metodologi"
+            className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-panel-2/70 px-2.5 py-1.5 text-xs font-medium text-ink transition hover:border-accent/50 hover:text-accent sm:px-3"
           >
             <BookOpen size={14} />
-            Panduan &amp; Metodologi
+            <span className="hidden sm:inline">Panduan &amp; Metodologi</span>
           </button>
 
           <button
             type="button"
             onClick={onReset}
-            className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-panel-2/70 px-3 py-1.5 text-xs font-medium text-ink transition hover:border-accent/50 hover:text-accent"
+            aria-label="Reset kamera"
+            title="Reset kamera"
+            className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-panel-2/70 px-2.5 py-1.5 text-xs font-medium text-ink transition hover:border-accent/50 hover:text-accent sm:px-3"
           >
             <RotateCcw size={14} />
-            Reset kamera
+            <span className="hidden lg:inline">Reset kamera</span>
           </button>
 
           <button

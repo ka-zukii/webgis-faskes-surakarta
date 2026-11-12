@@ -9,7 +9,7 @@ export default function MapLegend({ scale }: MapLegendProps) {
   if (scale.min === null || scale.max === null) return null;
   const gradient = [0, 0.5, 1].map((t) => sampleRamp(scale.palette, t));
   return (
-    <div className="glass pointer-events-none absolute bottom-3 left-3 z-10 w-64 rounded-xl px-3 py-2.5">
+    <div className="glass pointer-events-none absolute bottom-3 left-3 z-10 w-64 rounded-xl px-3 py-2.5 max-md:bottom-auto max-md:left-2 max-md:top-2 max-md:w-40">
       <p className="text-[11px] font-medium text-ink">{scale.label}</p>
       <div
         className="mt-2 h-2 rounded-full"

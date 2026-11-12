@@ -21,6 +21,7 @@ import EquityPanel from "@/components/dashboard/EquityPanel";
 
 interface SidebarRightProps {
   open: boolean;
+  onClose: () => void;
   facility: HealthcareFacility | null;
   unit: KelurahanUnit | null;
   kecamatan: KecamatanShape | null;
@@ -609,6 +610,7 @@ function Summary({
 
 export default function SidebarRight({
   open,
+  onClose,
   facility,
   unit,
   kecamatan,
@@ -626,11 +628,22 @@ export default function SidebarRight({
   return (
     <aside
       aria-hidden={!open}
-      className={`glass relative z-20 h-full shrink-0 overflow-hidden border-y-0 border-r-0 transition-[width,opacity] duration-300 ease-out ${
-        open ? "w-80 opacity-100" : "w-0 border-l-0 opacity-0"
+      className={`glass relative z-20 h-full shrink-0 overflow-hidden border-y-0 border-r-0 transition-[width,opacity,transform] duration-300 ease-out max-md:absolute max-md:inset-x-0 max-md:bottom-0 max-md:z-40 max-md:h-[62%] max-md:w-full max-md:rounded-t-2xl max-md:border-t max-md:border-white/10 max-md:shadow-2xl ${
+        open ? "w-80 opacity-100 max-md:translate-y-0" : "w-0 border-l-0 opacity-0 max-md:translate-y-full"
       }`}
     >
-      <div className="scroll-thin h-full w-80 overflow-y-auto p-4 pt-14">
+      <div className="scroll-thin h-full w-80 max-md:w-full overflow-y-auto p-4 pt-14 max-md:pt-3">
+        <div className="mb-3 flex items-center justify-between md:hidden">
+          <span className="text-xs font-semibold text-muted">Detail &amp; dashboard</span>
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Tutup panel detail"
+            className="grid h-8 w-8 place-items-center rounded-lg border border-white/10 text-muted"
+          >
+            <X size={15} />
+          </button>
+        </div>
         {facility && (
           <FacilityDetail
             key={facility.id}

@@ -33,7 +33,7 @@ export default function BottomBar({
   hoveredName,
 }: BottomBarProps) {
   return (
-    <footer className="glass relative z-30 flex h-9 shrink-0 items-center gap-5 overflow-x-auto border-x-0 border-b-0 px-4 text-[11px] scroll-thin">
+    <footer className="glass relative z-30 hidden h-9 shrink-0 items-center gap-5 overflow-x-auto border-x-0 border-b-0 px-4 text-[11px] scroll-thin md:flex">
       <Item label="Kamera" value={lon !== null && lat !== null ? `${formatCoord(lat)}, ${formatCoord(lon)}` : "-"} />
       <Item label="Zoom" value={zoom !== null ? `~${zoom}` : "-"} />
       <Item label="Mode" value={modeLabel} />

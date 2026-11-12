@@ -20,7 +20,9 @@ export default function FacilityTooltip({ facility }: FacilityTooltipProps) {
     return () => window.removeEventListener("pointermove", onMove);
   }, []);
 
-  if (!facility || !pos) return null;
+  // Perangkat sentuh tidak punya hover; tooltip hanya mengganggu saat menggeser peta.
+  const touchOnly = window.matchMedia("(pointer: coarse)").matches;
+  if (!facility || !pos || touchOnly) return null;
 
   const meta = FACILITY_META[facility.tipe];
   const lokasi = [facility.kelurahan, facility.kecamatan]

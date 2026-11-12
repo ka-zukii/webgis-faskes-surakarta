@@ -1,4 +1,4 @@
-import { Building2, Pill, Stethoscope, Syringe } from "lucide-react";
+import { Building2, Pill, Stethoscope, Syringe, X } from "lucide-react";
 import type { ChangeEvent, ComponentType } from "react";
 import type { FacilityType, VisibleTypes } from "@/types";
 import { FACILITY_META, FACILITY_TYPES } from "@/features/facilities/meta";
@@ -7,6 +7,7 @@ import { DEFAULT_WEIGHTS, type CapacityWeights } from "@/features/analysis/metri
 
 interface SidebarLeftProps {
   open: boolean;
+  onClose: () => void;
   counts: Record<FacilityType, number>;
   visibleTypes: VisibleTypes;
   onToggleType: (type: FacilityType) => void;
@@ -59,6 +60,7 @@ const WEIGHT_FIELDS: { key: keyof CapacityWeights; label: string }[] = [
 
 export default function SidebarLeft({
   open,
+  onClose,
   counts,
   visibleTypes,
   onToggleType,
@@ -82,11 +84,23 @@ export default function SidebarLeft({
   return (
     <aside
       aria-hidden={!open}
-      className={`glass relative z-20 h-full shrink-0 overflow-hidden border-y-0 border-l-0 transition-[width,opacity] duration-300 ease-out ${
-        open ? "w-72 opacity-100" : "w-0 border-r-0 opacity-0"
+      className={`glass relative z-20 h-full shrink-0 overflow-hidden border-y-0 border-l-0 transition-[width,opacity,transform] duration-300 ease-out max-md:absolute max-md:inset-y-0 max-md:left-0 max-md:z-40 max-md:w-[min(18rem,88vw)] max-md:shadow-2xl ${
+        open ? "w-72 opacity-100 max-md:translate-x-0" : "w-0 border-r-0 opacity-0 max-md:-translate-x-full"
       }`}
     >
-      <div className="scroll-thin flex h-full w-72 flex-col gap-6 overflow-y-auto p-4 pt-14">
+      <div className="scroll-thin flex h-full w-72 max-md:w-full flex-col gap-6 overflow-y-auto p-4 pt-14 max-md:pt-4">
+        <div className="flex items-center justify-between md:hidden">
+          <h2 className="text-sm font-semibold text-ink">Panel kontrol</h2>
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Tutup panel kontrol"
+            className="grid h-8 w-8 place-items-center rounded-lg border border-white/10 text-muted"
+          >
+            <X size={15} />
+          </button>
+        </div>
+
         <section>
           <SectionTitle>Map Layers</SectionTitle>
           <ul className="flex flex-col gap-1.5">

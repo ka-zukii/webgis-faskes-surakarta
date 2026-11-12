@@ -57,7 +57,7 @@ export default function StoryPanel({
   return (
     <section
       aria-live="polite"
-      className="glass animate-fade-in-up absolute bottom-4 left-1/2 z-40 w-[min(36rem,calc(100%-2rem))] -translate-x-1/2 rounded-2xl p-4"
+      className="glass animate-fade-in-up absolute bottom-4 left-1/2 z-40 w-[min(36rem,calc(100%-2rem))] -translate-x-1/2 rounded-2xl p-4 max-md:bottom-3 max-md:z-20 max-md:max-h-[62%] max-md:overflow-y-auto max-md:p-3"
     >
       <div className="mb-2 flex items-center justify-between text-[11px] text-muted">
         <span className="font-semibold uppercase tracking-[0.14em] text-accent">

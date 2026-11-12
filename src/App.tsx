@@ -1,4 +1,6 @@
 import { useCallback, useMemo, useState } from "react";
+import type { LucideIcon } from "lucide-react";
+import { PanelRight, Presentation, SlidersHorizontal } from "lucide-react";
 import Topbar from "@/components/layout/Topbar";
 import SidebarLeft from "@/components/layout/SidebarLeft";
 import SidebarRight from "@/components/layout/SidebarRight";
@@ -42,6 +44,35 @@ import FacilityTooltip from "@/components/map/FacilityTooltip";
 import StoryPanel from "@/components/story/StoryPanel";
 import { buildStorySteps } from "@/features/story/steps";
 
+/** Di bawah 768px panel tampil sebagai drawer/bottom sheet dan dimulai dalam keadaan tertutup. */
+const isDesktop = () => window.matchMedia("(min-width: 768px)").matches;
+
+function MobileNavButton({
+  icon: Icon,
+  label,
+  active,
+  onClick,
+}: {
+  icon: LucideIcon;
+  label: string;
+  active: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-pressed={active}
+      className={`flex h-14 flex-col items-center justify-center gap-0.5 text-[11px] font-medium transition ${
+        active ? "text-accent" : "text-muted"
+      }`}
+    >
+      <Icon size={18} />
+      {label}
+    </button>
+  );
+}
+
 function ChevronToggle({
   open,
   side,
@@ -59,7 +90,7 @@ function ChevronToggle({
       onClick={onClick}
       aria-label={label}
       title={label}
-      className={`absolute top-3 z-10 grid h-8 w-8 place-items-center rounded-lg border border-white/10 bg-panel/80 text-muted backdrop-blur transition hover:text-accent ${
+      className={`absolute top-3 z-10 hidden h-8 w-8 md:grid place-items-center rounded-lg border border-white/10 bg-panel/80 text-muted backdrop-blur transition hover:text-accent ${
         side === "left" ? "left-3" : "right-3"
       }`}
     >
@@ -103,8 +134,8 @@ export default function App() {
   const [resetSignal, setResetSignal] = useState(0);
   const [camera, setCamera] = useState<SceneCameraInfo | null>(null);
   const [renderReady, setRenderReady] = useState(false);
-  const [leftOpen, setLeftOpen] = useState(true);
-  const [rightOpen, setRightOpen] = useState(true);
+  const [leftOpen, setLeftOpen] = useState<boolean>(isDesktop);
+  const [rightOpen, setRightOpen] = useState<boolean>(isDesktop);
 
   const counts = useMemo(() => countByType(facilities), [facilities]);
   const visibleCount = useMemo(
@@ -229,6 +260,7 @@ export default function App() {
       setSelection(next);
       if (!next) return;
       setRightOpen(true);
+      if (!isDesktop()) setLeftOpen(false);
       if (!fly) return;
       const point = pointFor(next);
       if (point) setFocus({ x: point.x, z: point.z });
@@ -241,6 +273,24 @@ export default function App() {
       select(next, next !== null && next.kind !== "facility"),
     [select],
   );
+
+  /** Membuka satu panel di mobile otomatis menutup panel lainnya. */
+  const togglePanel = (side: "left" | "right") => {
+    if (side === "left") {
+      const next = !leftOpen;
+      setLeftOpen(next);
+      if (next && !isDesktop()) setRightOpen(false);
+    } else {
+      const next = !rightOpen;
+      setRightOpen(next);
+      if (next && !isDesktop()) setLeftOpen(false);
+    }
+  };
+
+  const closePanels = () => {
+    setLeftOpen(false);
+    setRightOpen(false);
+  };
 
   const toggleType = useCallback((type: FacilityType) => {
     setVisibleTypes((prev) => ({ ...prev, [type]: !prev[type] }));
@@ -301,9 +351,19 @@ export default function App() {
         onStartStory={() => goToStep(0)}
       />
 
-      <div className="flex min-h-0 flex-1">
+      <div className="relative flex min-h-0 flex-1 max-md:overflow-hidden">
+        {(leftOpen || rightOpen) && (
+          <button
+            type="button"
+            aria-label="Tutup panel"
+            onClick={closePanels}
+            className="absolute inset-0 z-30 bg-black/50 md:hidden"
+          />
+        )}
+
         <SidebarLeft
           open={leftOpen}
+          onClose={() => setLeftOpen(false)}
           counts={counts}
           visibleTypes={visibleTypes}
           onToggleType={toggleType}
@@ -381,6 +441,7 @@ export default function App() {
 
         <SidebarRight
           open={rightOpen}
+          onClose={() => setRightOpen(false)}
           facility={selectedFacility}
           unit={selectedUnit}
           kecamatan={selectedKecamatan}
@@ -396,6 +457,31 @@ export default function App() {
           onClearSelection={() => setSelection(null)}
         />
       </div>
+
+      <nav className="glass relative z-30 grid shrink-0 grid-cols-3 border-x-0 border-b-0 pb-[env(safe-area-inset-bottom)] md:hidden">
+        <MobileNavButton
+          icon={SlidersHorizontal}
+          label="Kontrol"
+          active={leftOpen}
+          onClick={() => togglePanel("left")}
+        />
+        <MobileNavButton
+          icon={Presentation}
+          label="Presentasi"
+          active={storyIndex !== null}
+          onClick={() => {
+            closePanels();
+            if (storyIndex !== null) setStoryIndex(null);
+            else goToStep(0);
+          }}
+        />
+        <MobileNavButton
+          icon={PanelRight}
+          label="Detail"
+          active={rightOpen}
+          onClick={() => togglePanel("right")}
+        />
+      </nav>
 
       <BottomBar
         lon={camera?.lon ?? null}

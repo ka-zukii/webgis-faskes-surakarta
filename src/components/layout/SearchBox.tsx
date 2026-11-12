@@ -86,7 +86,7 @@ export default function SearchBox({ items, onPick }: SearchBoxProps) {
           onMouseDown={(event: MouseEvent<HTMLUListElement>) =>
             event.preventDefault()
           }
-          className="glass scroll-thin absolute left-0 right-0 top-full z-40 mt-1.5 max-h-96 min-w-[24rem] overflow-y-auto rounded-xl p-1.5"
+          className="glass scroll-thin absolute left-0 right-0 top-full z-40 mt-1.5 max-h-96 overflow-y-auto rounded-xl p-1.5 md:min-w-[24rem]"
         >
           {results.length === 0 && (
             <li className="px-3 py-2 text-xs text-muted">
