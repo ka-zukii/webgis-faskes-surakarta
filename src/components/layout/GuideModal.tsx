@@ -197,7 +197,7 @@ export default function GuideModal({ open, onClose }: GuideModalProps) {
         <div className="flex items-center justify-between gap-3 border-b border-white/5 px-5 py-4">
           <div className="flex items-center gap-2">
             <BookOpen size={16} className="text-accent" />
-            <h2 id="guide-title" className="text-base font-semibold">
+            <h2 id="guide-title" className="text-white font-semibold">
               Panduan &amp; Metodologi
             </h2>
           </div>
