@@ -88,7 +88,10 @@ function FacilityDetail({
             />
             {meta.label}
           </span>
-          <h2 className="mt-2 text-base font-semibold leading-snug">
+          <h2
+            className="mt-2 font-semibold leading-snug text-white"
+            style={{ color: "#FFFFFF" }}
+          >
             {facility.nama}
           </h2>
         </div>
@@ -169,7 +172,10 @@ function KelurahanDetail({
           <span className="inline-flex rounded-md bg-accent/10 px-2 py-0.5 text-[11px] font-semibold text-accent">
             Kelurahan · {unit.kecamatan}
           </span>
-          <h2 className="mt-2 text-base font-semibold leading-snug">
+          <h2
+            className="mt-2 font-semibold leading-snug text-white"
+            style={{ color: "#FFFFFF" }}
+          >
             {unit.nama}
           </h2>
         </div>
@@ -311,7 +317,10 @@ function KecamatanDetail({
           <span className="inline-flex rounded-md bg-violet-500/15 px-2 py-0.5 text-[11px] font-semibold text-violet-300">
             Kecamatan · {members.length} kelurahan
           </span>
-          <h2 className="mt-2 text-base font-semibold leading-snug">
+          <h2
+            className="mt-2 font-semibold leading-snug text-white"
+            style={{ color: "#FFFFFF" }}
+          >
             {shape.nama}
           </h2>
         </div>
@@ -460,7 +469,12 @@ function Summary({
   return (
     <div className="flex flex-col gap-4">
       <div className="animate-fade-in-up">
-        <h2 className="text-base font-semibold">Dashboard Kota Surakarta</h2>
+        <h2
+          className="text-base font-semibold text-white"
+          style={{ color: "#FFFFFF" }}
+        >
+          Dashboard Kota Surakarta
+        </h2>
         <p className="mt-1 text-xs leading-relaxed text-muted">
           Pilih kelurahan, kecamatan, atau marker fasilitas pada peta untuk
           melihat detailnya.
