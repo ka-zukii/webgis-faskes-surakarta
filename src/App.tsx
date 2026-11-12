@@ -39,6 +39,8 @@ import type {
   VisibleTypes,
 } from "@/types";
 import FacilityTooltip from "@/components/map/FacilityTooltip";
+import StoryPanel from "@/components/story/StoryPanel";
+import { buildStorySteps } from "@/features/story/steps";
 
 function ChevronToggle({
   open,
@@ -91,6 +93,7 @@ export default function App() {
   const [equityConfig, setEquityConfig] = useState<EquityConfig>(
     DEFAULT_EQUITY_CONFIG,
   );
+  const [storyIndex, setStoryIndex] = useState<number | null>(null);
   const [showKelurahan, setShowKelurahan] = useState(true);
   const [showKecamatan, setShowKecamatan] = useState(true);
   const [showCoverage, setShowCoverage] = useState(false);
@@ -261,6 +264,28 @@ export default function App() {
     [],
   );
 
+  const storySteps = useMemo(
+    () =>
+      buildStorySteps({
+        units,
+        kecamatan: kecamatanShapes,
+        weights,
+        config: equityConfig,
+      }),
+    [units, kecamatanShapes, weights, equityConfig],
+  );
+
+  const goToStep = useCallback(
+    (index: number) => {
+      const step = storySteps[index];
+      if (!step) return;
+      setStoryIndex(index);
+      if (step.target) select(step.target, true);
+      else handleReset();
+    },
+    [storySteps, select, handleReset],
+  );
+
   const loading = !facilitiesReady || analysis.status === "loading";
 
   return (
@@ -273,6 +298,7 @@ export default function App() {
         onReset={handleReset}
         searchItems={searchItems}
         onSearchPick={(item) => select(item.selection, true)}
+        onStartStory={() => goToStep(0)}
       />
 
       <div className="flex min-h-0 flex-1">
@@ -321,6 +347,15 @@ export default function App() {
               onReady={() => setRenderReady(true)}
             />
           </div>
+
+          {storyIndex !== null && (
+            <StoryPanel
+              steps={storySteps}
+              index={storyIndex}
+              onGo={goToStep}
+              onClose={() => setStoryIndex(null)}
+            />
+          )}
 
           {loading && (
             <div className="pointer-events-none absolute inset-0 grid place-items-center">

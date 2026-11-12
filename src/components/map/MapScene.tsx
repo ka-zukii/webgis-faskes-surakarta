@@ -54,6 +54,20 @@ export interface MapSceneProps {
   onReady: () => void;
 }
 
+interface CameraTween {
+  goal: CameraGoal;
+  from: THREE.Vector3;
+  fromTarget: THREE.Vector3;
+  elapsed: number;
+  duration: number;
+  lift: number;
+}
+
+/** Kurva halus di awal dan akhir, sehingga gerakan kamera tidak terasa mendadak. */
+function easeInOutCubic(t: number): number {
+  return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+}
+
 /** Pendekatan zoom semu dari jarak kamera; hanya untuk tampilan status. */
 function computeZoom(distance: number): number {
   const safe = Math.max(distance, 0.01);
@@ -86,6 +100,7 @@ function SceneContents(props: SceneProps) {
 
   const controlsRef = useRef<OrbitRef>(null);
   const goalRef = useRef<CameraGoal | null>(null);
+  const tweenRef = useRef<CameraTween | null>(null);
   const lastReportRef = useRef(-Infinity);
   const lastInfoRef = useRef<SceneCameraInfo | null>(null);
 
@@ -130,19 +145,33 @@ function SceneContents(props: SceneProps) {
 
     const goal = goalRef.current;
     if (goal) {
-      const k = 1 - Math.exp(-delta * 4);
-      state.camera.position.lerp(goal.position, k);
-      controls.target.lerp(goal.target, k);
+      let tween = tweenRef.current;
+      if (!tween || tween.goal !== goal) {
+        // Tween baru dimulai dari posisi kamera saat ini, sehingga transisi selalu mulus.
+        const distance = state.camera.position.distanceTo(goal.position);
+        tween = {
+          goal,
+          from: state.camera.position.clone(),
+          fromTarget: controls.target.clone(),
+          elapsed: 0,
+          duration: Math.min(2.2, Math.max(1.0, 0.9 + distance * 0.12)),
+          lift: Math.min(3, distance * 0.3),
+        };
+        tweenRef.current = tween;
+      }
+
+      tween.elapsed += delta;
+      const t = Math.min(tween.elapsed / tween.duration, 1);
+      const p = easeInOutCubic(t);
+      state.camera.position.lerpVectors(tween.from, goal.position, p);
+      // Kamera sedikit naik di tengah perjalanan agar terasa seperti terbang, bukan meluncur datar.
+      state.camera.position.y += Math.sin(Math.PI * p) * tween.lift;
+      controls.target.lerpVectors(tween.fromTarget, goal.target, p);
       controls.update();
 
-      const done =
-        state.camera.position.distanceTo(goal.position) < 0.02 &&
-        controls.target.distanceTo(goal.target) < 0.02;
-      if (done) {
-        state.camera.position.copy(goal.position);
-        controls.target.copy(goal.target);
-        controls.update();
+      if (t >= 1) {
         goalRef.current = null;
+        tweenRef.current = null;
       }
     }
 
